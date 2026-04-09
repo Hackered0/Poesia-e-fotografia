@@ -1,5 +1,5 @@
 #📑 Planejamento & Cronograma Trello
-<[NOTA]>
+
 >O sucesso de um projeto complexo reside na clareza de sua execução. Este repositório utiliza o Trello como bússola para a conclusão das metas e organização de sprints.
 >
 >🔗 Link do Quadro
