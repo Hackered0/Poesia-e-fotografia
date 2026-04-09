@@ -8,7 +8,7 @@
 >
 >🪷 A Simbologia da Lótus
 >
->A escolha visual deste projeto não é meramente estética; ela é um reflexo do processo criativo e técnico. A Flor de Lótus que ilustra nosso planejamento carrega significados profundos:
+>A escolha visual deste projeto não é meramente estética; ela é um reflexo do processo criativo. A Flor de Lótus que ilustra meu planejamento carrega significados profundos:
 >
 >Renascimento e Resiliência: Assim como a lótus floresce na lama, este projeto surge da superação de desafios técnicos e da constante transformação de ideias.
 >
