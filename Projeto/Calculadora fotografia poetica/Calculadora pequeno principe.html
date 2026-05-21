@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pequeno_principe.css">
+</head>
+<body>
+    <body>
+    <div class="container"> 
+        <h1>Calculadora Pequeno Principe (Fração e raiz ) </h1><br>
+        <h2>"Só se vê bem com o coração, o essencial é invisível aos olhos"</h2><br>
+        <h3>Digite um número:</h3>
+        <div class="input">
+            <input type="number" id="ipt_numero" placeholder="Ex: 42">
+        </div>
+        
+        <button onclick="converter()" class="converter">Converter</button>
+         
+        <div id="div_mensagem" ></div>
+   </div> 
+</body>
+</html>
+<script>
+    function converter(){
+        let numero = Number(ipt_numero.value);
+        
+        // Raiz quadrada do número
+        let raiz = numero * numero;
+
+        
+        // Fração em decimal
+        let fracao = 1 / numero;
+        //Aqui eu divido 1 pelo número do usuario para dar a fração do usuario em 
+        //Decimal 
+        
+       
+        
+        // Par ou Ímpar
+        let par_ou_impar;
+        if (numero % 2 == 0) {
+            par_ou_impar = "Par";
+        } else {
+            par_ou_impar = "Ímpar";
+        }
+
+        // Fatorial
+        let fatorial = 1;
+        for (let contador = 1; contador <= numero; contador = contador + 1) {
+            fatorial = fatorial * contador;
+        }
+        div_mensagem.innerHTML = `
+        <br>A raiz quadrada do seu número é:  ${(raiz.toFixed(0))}  <br>
+        <br>A fração em decimal do seu número é: ${(fracao.toFixed(4))} <br>
+        <br>Seu número, é um número: ${(par_ou_impar)} <br>
+        <br> A tabuada do seu número é:<br>
+        <br>${(numero)} x 1 =  ${(numero * 1)} 
+        <br>${(numero)} x 2 = ${(numero * 2)} 
+        <br>${(numero)} x 3 = ${(numero * 3)}
+        <br>${(numero)} x 4 = ${(numero * 4)} 
+        <br>${(numero)} x 5 = ${(numero * 5)} 
+        <br>${(numero)} x 6 = ${(numero * 6)} 
+        <br>${(numero)} x 7 = ${(numero * 7)} 
+        <br>${(numero)} x 8 = ${(numero * 8)} 
+        <br>${(numero)} x 9 = ${(numero * 9)} 
+        <br>${(numero)} x 10 = ${(numero * 10)}  `;
+
+        
+    
+    }
+</script>

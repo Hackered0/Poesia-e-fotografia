@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+</head>
+<body>
+    <div class="caixa">
+    <div class="cabecalho">
+        <span><h1>Simulador de fotografia poetica - Descubra sua poesia </h1></span>
+    </div>
+    <div class="formulario">
+        <div class="item-campo">
+            <span>Digite seu primeiro nome: </span>  
+            <input type="text" id="ipt_primeiro_nome">  
+        </div>
+        <div class="item-campo">
+            <span>Digite o seu ano de nascimento:</span>  
+            <select id="sel_ano_nascimento">
+                <option value="opcao">Escolha uma opção</option>
+                <option value="1940">1940</option>
+                <option value="1941">1941</option>
+                <option value="1942">1942</option>
+                <option value="1943">1943</option>
+                <option value="1944">1944</option>
+                <option value="1945">1945</option>
+                <option value="1946">1946</option>
+                <option value="1947">1947</option>
+                <option value="1948">1948</option>
+                <option value="1949">1949</option>
+                <option value="1950">1950</option>
+                <option value="1951">1951</option>
+                <option value="1952">1952</option>
+                <option value="1953">1953</option>
+                <option value="1954">1954</option>
+                <option value="1955">1955</option>
+                <option value="1956">1956</option>
+                <option value="1957">1957</option>
+                <option value="1958">1958</option>
+                <option value="1959">1959</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>  
+          </div>
+        <div class="item-campo">
+            <span>Selecione a sua estação do ano favorita:</span>  
+            <select id="sel_estacao_do_ano">
+                <option value="opcao">Escolha uma opção</option>
+                <option value="Primavera">Primavera</option>
+                <option value="Verão">Verão</option>
+                <option value="Outono">Outono</option>
+                <option value="Inverno">Inverno</option>
+            </select>  
+        </div>
+    <div class="item-campo">
+            <span>Selecione seu estilo de fotografia favorito:</span>  
+            <select id="sel_fotografia">
+                <option value="opcao">Escolha uma opção</option>
+                <option value="Analógica">Analógica</option>
+                <option value="Preto e Branco">Preto e Branco</option>
+                <option value="Macro">Macro</option>
+                <option value="Retrato">Retrato</option>
+                <option value="Paisagem">Paisagem</option>
+                <option value="Cyberpunk">Cyberpunk</option>
+                <option value="Vintage">Vintage</option>
+                <option value="Minimalista">Minimalista</option>
+                <option value="Street Photography">Street Photography</option>
+                <option value="Longa Exposição">Longa Exposição</option>
+                <option value="Documental">Documental</option>
+                <option value="Moda">Moda</option>
+                <option value="Surrealista">Surrealista</option>
+                <option value="Arquitetura">Arquitetura</option>
+                <option value="Gastronômica">Gastronômica</option>
+                <option value="Fine Art">Fine Art</option>
+                <option value="Subaquática">Subaquática</option>
+                <option value="Astrofotografia">Astrofotografia</option>
+                <option value="Infravermelho">Infravermelho</option>
+                <option value="Gótica">Gótica</option>
+            </select>  
+       </div>
+    </div>
+</div>
+
+<div class="botao">
+    <button onclick="mostrarMensagem()">Verificar poesia</button>
+</div>
+<div id="div_mensagem" class="resultado"></div>
+</body>
+</html>
+<script>
+    function mostrarMensagem(){
+        //Lista de todos os anos que estão nas opções
+        let lista_anos = [1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+
+        //Estações que estão nas opções
+        let lista_estacoes = [`Pimavera`,`Verão`,`Outono `,`Inverno`];
+        let lista_pontos = [40, 30, 45, 50]; // Pontos de afinidade
+
+        //Lista dos estilos das fotografias
+        let analogica = "Analógica";
+        let pretoEBranco = "Preto e Branco";
+        let macro = "Macro";
+        let retrato = "Retrato";
+        let paisagem = "Paisagem";
+        let cyberpunk = "Cyberpunk";
+        let vintage = "Vintage";
+        let minimalista = "Minimalista";
+        let streetPhotography = "Street Photography";
+        let longaExposicao = "Longa Exposição";
+        let documental = "Documental";
+        let moda = "Moda";
+        let surrealista = "Surrealista";
+        let arquitetura = "Arquitetura";
+        let gastronomica = "Gastronomica";
+        let fineArt = "Fine Art";
+        let subaquatica = "Subaquática";
+        let astrofotografia = "Astrofotografia";
+        let infravermelho = "Infravermelho";
+        let gotica = "Gotica";
+
+        //Todos os caracters especiais para validação
+        let vetor = ['!','@','#','$','%','¨','&','*','(',')','-','+','=','{','}'];
+
+        //Poesias
+        let lista_poesia = [
+        ` Memória<br>
+        <br>
+        Amar o perdido<br>
+        deixa confundido<br>
+        este coração.<br>
+        <br>
+        Nada pode o olvido<br>
+        contra o sem sentido<br>
+        apelo do Não.<br>
+        <br>
+        As coisas tangíveis<br>
+        tornam-se insensíveis<br>
+        à palma da mão<br>
+        <br>
+        Mas as coisas findas<br>
+        muito mais que lindas,<br>
+        essas ficarão.Carlos Drummond de Andrade<br>
+        `,
+        `As sem-razões do amor<br>
+        <br>
+        Eu te amo porque te amo,<br>
+        Não precisas ser amante,<br>
+        e nem sempre sabes sê-lo.<br>
+        Eu te amo porque te amo.<br>
+        Amor é estado de graça<br>
+        e com amor não se paga.<br>
+        <br>
+        Amor é dado de graça,<br>
+        é semeado no vento,<br>
+        na cachoeira, no eclipse.<br>
+        Amor foge a dicionários<br>
+        e a regulamentos vários.<br>
+        <br>
+        Eu te amo porque não amo<br>
+        bastante ou demais a mim.<br>
+        Porque amor não se troca,<br>
+        não se conjuga nem se ama.<br>
+        Porque amor é amor a nada,<br>
+        feliz e forte em si mesmo.<br>
+        <br>
+        Amor é primo da morte,<br>
+        e da morte vencedor,<br>
+        por mais que o matem (e matam)<br>
+        a cada instante de amor.Carlos Drummond de Andrade<br>
+        `,
+        `A Felicidade<br>
+        <br>
+        Tristeza não tem fim<br>
+        Felicidade sim<br>
+        <br>
+        A felicidade é como a pluma<br>
+        Que o vento vai levando pelo ar<br>
+        Voa tão leve<br>
+        Mas tem a vida breve<br>
+        Precisa que haja vento sem parar<br>
+        <br>
+        A felicidade do pobre parece<br>
+        A grande ilusão do carnaval<br>
+        A gente trabalha o ano inteiro<br>
+        Por um momento de sonho<br>
+        Pra fazer a fantasia<br>
+        De rei ou de pirata ou jardineira<br>
+        Pra tudo se acabar na quarta-feira<br>
+        <br>
+        Tristeza não tem fim<br>
+        Felicidade sim<br>
+        <br>
+        A felicidade é como a gota<br>
+        De orvalho numa pétala de flor<br>
+        Brilha tranqüila<br>
+        Depois de leve oscila<br>
+        E cai como uma lágrima de amor<br>
+        <br>
+        A felicidade é uma coisa boa<br>
+        E tão delicada também<br>
+        Tem flores e amores<br>
+        De todas as cores<br>
+        Tem ninhos de passarinhos<br>
+        Tudo de bom ela tem<br>
+        E é por ela ser assim tão delicada<br>
+        Que eu trato dela sempre muito bem<br>
+        <br>
+        Tristeza não tem fim<br>
+        Felicidade sim<br>
+        <br>
+        A minha felicidade está sonhando<br>
+        Nos olhos da minha namorada<br>
+        É como esta noite, passando, passando<br>
+        Em busca da madrugada<br>
+        Falem baixo, por favor<br>
+        Pra que ela acorde alegre com o dia<br>
+        Oferecendo beijos de amor<br>
+        <br>
+        Vinicius de Moraes<br>
+        `,
+        `Convite Triste<br>
+        <br>
+        Meu amigo, vamos sofrer,<br>
+        vamos beber, vamos ler jornal,<br>
+        vamos dizer que a vida é ruim,<br>
+        meu amigo, vamos sofrer.<br>
+        <br>
+        Vamos fazer um poema<br>
+        ou qualquer outra besteira.<br>
+        Fitar por exemplo uma estrela<br>
+        por muito tempo, muito tempo<br>
+        e dar um suspiro fundo<br>
+        ou qualquer outra besteira.<br>
+        <br>
+        Vamos beber uísque, vamos<br>
+        beber cerveja preta e barata,<br>
+        beber, gritar e morrer,<br>
+        ou, quem sabe? beber apenas.<br>
+        <br>
+        Vamos xingar a mulher,<br>
+        que está envenenando a vida<br>
+        com seus olhos e suas mãos<br>
+        e o corpo que tem dois seios<br>
+        e tem um embigo também.<br>
+        Meu amigo, vamos xingar<br>
+        o corpo e tudo que é dele<br>
+        e que nunca será alma.<br>
+        <br>
+        Meu amigo, vamos cantar,<br>
+        vamos chorar de mansinho<br>
+        e ouvir muita vitrola,<br>
+        depois embriagados vamos<br>
+        beber mais outros sequestros<br>
+        (o olhar obsceno e a mão idiota)<br>
+        depois vomitar e cair<br>
+        e dormir.<br>
+        <br>
+        (Em: Brejo das Almas)<br>
+        Carlos Drummond de Andrade<br>
+        `,
+        `Danço para ti<br>
+        <br>
+        Danço num sonho de ternura<br>
+        Uma música de palavras calmas<br>
+        Dançam vontades e desejos<br>
+        Rodopiam sentimentos da alma.<br>
+        <br>
+        Levanta-se o espírito que envolve<br>
+        todo o meu corpo fervente.<br>
+        Danço e liberto-me do tempo<br>
+        e contigo danço no meu pensamento.<br>
+        <br>
+        Sei que é um sonho, uma quimera<br>
+        Mas não quero despertar<br>
+        A tua imagem fugidia<br>
+        Só assim a consigo agarrar.<br>
+        <br>
+        Amo o teu corpo e danço.<br>
+        Dançarei mesmo quando a musica parar.<br>
+        Danço para ti... vens?<br>
+        Aqui não existe mais ninguém!<br>
+        <br>
+        Eu a dança e o meu sonho.<br>
+        E lembranças a voar...JoRut \"<br>
+        `,
+        `Tranchas de vida\"<br>
+        <br>
+        Quintal do peito<br>
+        <br>
+        O amor, nada mais é do que uma criança<br>
+        E o coração é um quintal<br>
+        Desses de avó<br>
+        Que as cercas compridas desaparecem<br>
+        <br>
+        Onde os montes e relvas tocam o céu<br>
+        Escondem fantasias, sonhos<br>
+        Lendas e superstições<br>
+        <br>
+        Mas para os desacreditados<br>
+        Só há terras, matos, tocos<br>
+        Nó máximo cobras e cabas<br>
+        <br>
+        Para as crianças, sempre bobas<br>
+        Há universos, reinos e principados<br>
+        É o baú de tesouros e magias<br>
+        Um mundo a ser explorado<br>
+        <br>
+        Lucas Palavra, Blog de Cabeça pra Baixo<br>
+        `,
+        `Saudade é solidão acompanhada,<br>
+        é quando o amor ainda não foi embora,<br>
+        mas o amado já.<br>
+        <br>
+        Saudade é amar um passado que ainda não passou,<br>
+        é recusar um presente que nos machuca,<br>
+        é não ver o futuro que nos convida.<br>
+        <br>
+        Saudade é sentir que existe o que não existe mais.<br>
+        <br>
+        Saudade é o inferno dos que perderam,<br>
+        é a dor dos que ficaram para trás,<br>
+        é o gosto de morte na boca dos que continuam.<br>
+        <br>
+        Só uma pessoa no mundo deseja sentir saudade:<br>
+        aquela que nunca amou.<br>
+        <br>
+        E esse é o maior dos sofrimentos:<br>
+        não ter por quem sentir saudades,<br>
+        passar pela vida e não viver.<br>
+        <br>
+        O maior dos sofrimentos é nunca ter sofrido.<br>
+        <br>
+        Aguinaldo Silva<br>
+        `,
+        `A Solidão e Sua Porta<br>
+        Quando mais nada resistir que valha<br>
+        a pena de viver e a dor de amar<br>
+        E quando nada mais interessar<br>
+        (nem o torpor do sono que se espalha)<br>
+        Quando pelo desuso da navalha<br>
+        A barba livremente caminhar<br>
+        e até Deus em silêncio se afastar<br>
+        deixando-te sozinho na batalha<br>
+        <br>
+        Arquitetar na sombra a despedida<br>
+        Deste mundo que te foi contraditório<br>
+        Lembra-te que afinal te resta a vida<br>
+        <br>
+        Com tudo que é insolvente e provisório<br>
+        e de que ainda tens uma saída<br>
+        Entrar no acaso e amar o transitório.<br>
+        Carlos Pena Filho<br>
+        `,
+        `Como dizia o poeta<br>
+        <br>
+        Quem já passou<br>
+        Por esta vida e não viveu<br>
+        Pode ser mais, mas sabe menos do que eu<br>
+        Porque a vida só se dá<br>
+        Pra quem se deu<br>
+        Pra quem amou, pra quem chorou<br>
+        Pra quem sofreu, ai<br>
+        <br>
+        Quem nunca curtiu uma paixão<br>
+        Nunca vai ter nada, não<br>
+        <br>
+        Não há mal pior<br>
+        Do que a descrença<br>
+        Mesmo o amor que não compensa<br>
+        É melhor que a solidão<br>
+        <br>
+        Abre os teus braços, meu irmão, deixa cair<br>
+        Pra que somar se a gente pode dividir?<br>
+        Eu francamente já não quero nem saber<br>
+        De quem não vai porque tem medo de sofrer<br>
+        <br>
+        Ai de quem não rasga o coração<br>
+        Esse não vai ter perdão<br>
+        Vinícius de Moraes e Toquinho<br>
+        `,
+        `NÃO SOU POETA<br>
+        <br>
+        Quem me dera se eu fosse poeta<br>
+        E dos amores saber contar<br>
+        Falaria dum amor verdadeiro<br>
+        Porque da verdade o amor não sabe calar.<br>
+        <br>
+        Quem me dera prosar em versos<br>
+        Os sentidos de um coração<br>
+        Falaria que não há mentiras<br>
+        Quando se vive uma grande paixão.<br>
+        <br>
+        Ah, quem me dera recitar poemas<br>
+        Nos traços desse teu olhar<br>
+        Pô-lo-ia em declame teu sorriso<br>
+        E tuas formas de me encantar.<br>
+        <br>
+        Mas infelizmente não sou poeta<br>
+        E do amor não sei falar<br>
+        Se soubesse viveria em teus dias<br>
+        E nunca mais sairia de lá.<br>
+        Gil Buena<br>
+        `,
+        `Ser poeta<br>
+        <br>
+        Dizem que o poeta é pouco de tudo<br>
+        E todas as qualidades lhe recaem,<br>
+        É boêmio, alcoólatra,pervertido e senhor das palavras e dos ombros alheios,<br>
+        <br>
+        Ser poeta é ser vivo para o mundo da razão e da imaginação,<br>
+        Não ser o senhor do sim e do não,mas de um talvez comuma certa dose de dúvida,<br>
+        Talvez ser poeta esteja alem das qualidades comuns dos humanos,<br>
+        Pois os poetas falam uma linguagem muitas vezes incompreensível,<br>
+        Por vez se deixa levar pela experiência primordial de algo novo.<br>
+        Ser poeta é não ter hora para dormir e nem para proferir doces palavras,<br>
+        È ser o senhor muitas vezes do cinismo, do sarcasmo e da liberdade \"in tontum\".<br>
+        <br>
+        È perceber no olhar da mulher a necessidade do afago e de um carinho,<br>
+        È saber conduzir a situação até aninhá-la em seus braços,<br>
+        È ser ousado ao adentrar sua mente com palavras sutis e sendo sutil saber te conquistar.<br>
+        O poeta sempre tem mais uma ficha para uma ultima deixa,<br>
+        É fascinado pelos olhares de gueixa que em poucas mulheres ele encontra,<br>
+        <br>
+        No final de tudo<br>
+        Ser poeta<br>
+        É ser um pouco de tudo e não ser nada,<br>
+        E sendo nada<br>
+        Talvez faça parte de alguma coisa que para alguns é TUDO.<br>
+        Moises Bottas<br>
+        `,
+        `Ser poeta<br>
+        <br>
+        Ser poeta é escrever sem tinta<br>
+        Ler sem nada escrito<br>
+        Falar sem abrir a boca<br>
+        Compreender os silêncios<br>
+        <br>
+        É viajar na loucura<br>
+        Andar na ignorância<br>
+        Viver na sabedoria<br>
+        Sendo amigo de tolos<br>
+        <br>
+        É morrer sem morte<br>
+        Viver sem vida<br>
+        É sofrer sem dor<br>
+        E celebrar sem alegria<br>
+        <br>
+        É roubar a dor alheia<br>
+        É Espalhar alegria<br>
+        É compartilhar a vida<br>
+        É ser o tácito grito das palavras<br>
+        Julio Cupes<br>
+        `,
+        `PARA SER POETA.<br>
+        <br>
+        Para ser poeta<br>
+        para ser bom<br>
+        ao que se presta<br>
+        tem que ter conteúdo<br>
+        em todos os sentidos.<br>
+        <br>
+        Dizem que ler engrandece<br>
+        É verdade, é verdade<br>
+        Mas quem quer dar<br>
+        o passo seguinte<br>
+        tem de escrever.<br>
+        <br>
+        Não basta ter só sentimento<br>
+        estar perdido em tormento<br>
+        Pois serão sempre<br>
+        os mesmos poemas<br>
+        de solidão e desalento.<br>
+        <br>
+        Misture tudo isso<br>
+        conhecimento e vida<br>
+        e tudo mais que<br>
+        pela cabeça passe<br>
+        faça da mente um turbilhão,<br>
+        um furacão.<br>
+        <br>
+        E plante uma flor<br>
+        no olho deste monstro<br>
+        E mais que tudo<br>
+        Não tenha medo<br>
+        ou vergonha e se mostre.<br>
+        <br>
+        E no final<br>
+        depois de tudo<br>
+        já escrito<br>
+        Está na hora do começo<br>
+        leia e releia o mesmo texto.<br>
+        <br>
+        Coloque nele você<br>
+        os acertos e os erros.<br>
+        Alinhar os pretextos<br>
+        e o mais importante<br>
+        no exato momento<br>
+        em que o texto ganha vida.<br>
+        <br>
+        Deixe que ele se vá<br>
+        Guarde e perca<br>
+        a lembrança querida.<br>
+        Com a sensação<br>
+        de que não foi você o autor<br>
+        mas o contrário<br>
+        o poeta é escrito,<br>
+        não é mais o escritor.<br>
+        <br>
+        Dante Vitoriano Locateli.<br>
+        `,
+        `Ser Poeta<br>
+        <br>
+        É ser tudo sem nunca ter sido<br>
+        É amar sem nunca ter amado<br>
+        É viajar sem nunca ter viajado<br>
+        É abraçar sem nunca ter abraçado<br>
+        <br>
+        É ser companhia sem nunca ter sido<br>
+        É elogiar sem nunca ter elogiado<br>
+        É festejar sem nunca ter festejado<br>
+        É conhecer sem nunca ter conhecido<br>
+        <br>
+        É ser amigo/a sem nunca ter sido<br>
+        É sentir sem nunca ter sentido<br>
+        É motivar sem nuca ter motivado<br>
+        É lutar sem nunca ter lutado<br>
+        <br>
+        É ser inspiração sem nunca ter sido<br>
+        É ajudar sem nunca ter ajudado<br>
+        É morrer sem nunca ter morrido<br>
+        É ter tudo sem nunca ter tido<br>
+        Anilya Atsoc<br>
+        `,
+            ];
+        
+        // Colocando valor nos inpts
+        let primeiro_nome = ipt_primeiro_nome.value; //Variavel do primeiro input
+        let ano_nascimento = Number (sel_ano_nascimento.value);//Variavel do segundo input
+        let estacao_do_ano = sel_estacao_do_ano.value; //Variavel do terceiro input
+        let fotografia = sel_fotografia.value; // Variavel do ultimo inpuit
+        div_mensagem.innerHTML = '';
+        
+        //Validações
+        if(vetor.includes(primeiro_nome)){
+        div_mensagem.innerHTML = `<span style="color: brown;">Digite um nome válido</span>`;
+        } else if (primeiro_nome == '' || ano_nascimento == 'opcao' || estacao_do_ano == 'opcao' || fotografia == 'opcao'){
+        div_mensagem.innerHTML = `<span style="color: brown;">Preencha todos os campos corretamente</span>`;
+        } else {
+        
+        // Saber quantos anos o usuario tem
+        let ano_atual = 2026;
+        let idade = ano_atual - ano_nascimento; // Subtração
+
+        // Pontuações de "afinidade"
+        //Primavera = 40;  Romance
+        //Verao = 30;  Alegre/Agitado
+        //Outono = 45;  Calmo/Sereno
+        //Inverno = 50;  Melancólico/Frio
+       
+
+        // Pegamos o ponto na mesma posição 
+        let posicao_da_estacao = lista_nomes.indexOf(lista_estacoes);
+        let peso_escolhido = lista_pontos[posicao_da_estacao];
+
+        //  Fazemos a conta da fração
+        let valor_multiplicado = idade_usuario * peso_escolhido;
+        let divisor_da_fracao = 10;
+        let resultado_da_divisao = valor_multiplicado / divisor_da_fracao;
+    
+        let numero_para_raiz = resultado_da_divisao;
+        let palpite_inicial = numero_para_raiz / 2;  
+        let ajuste_um = (palpite_inicial + (numero_para_raiz / palpite_inicial)) / 2;
+        let ajuste_dois = (ajuste_um + (numero_para_raiz / ajuste_um)) / 2;
+        let ajuste_tres = (ajuste_dois + (numero_para_raiz / ajuste_dois)) / 2;
+        let ajuste_quatro = (ajuste_tres + (numero_para_raiz / ajuste_tres)) / 2;
+        let indice_poetico_final = ajuste_quatro;
+
+        //Poesias para o usuario
+        let poesia_aleatoria = Math.random() * lista_poesia.length; //Aqui dá uma poesia aleatoria, embora dê um número quebrado
+        let contador = 0; //Contador 
+        
+        // Usei o while para ajudar, quando o número for maior que 1, eu pego uma unidade dele,
+        //e somamo  ao contador. Se o número era 3.7, o laço roda 3 vezes, assim me dando 
+        //um número inteiro que eu consiga usar
+        while (poesia_aleatoria >= 1) {
+        poesia_aleatoria = poesia_aleatoria- 1;
+        contador = contador + 1;
+        }
+        let poesia_aleatoria_certo = lista_poesia[contador]; //Aqui eu pego as poesias do meu vetor, e junto com a do 
+        // contador, assim me da uma poesia especifica a qual eu tenho o número.
+        
+        //Agora vamos colocar os resultados de acordo com os anos
+        if(ano_nascimento <= 1940){
+           div_mensagem.innerHTML += ` <br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br> Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br> `;
+        }else if (ano_nascimento <= 1945){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span> <br><br> `;
+        }else if (ano_nascimento <= 1950){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br> Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br> <br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span> <br><br> `;
+        }else if (ano_nascimento <= 1955){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br> Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br> <br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span> <br><br> `;
+        }else if (ano_nascimento <= 1960){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>  `;
+        }else if (ano_nascimento <= 1965){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br> Reservamos um momento para que a arte respire através da sua leitura.
+           <br> Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br> <br>Sua poesia é:<br><br> <span>${(poesia_aleatoria_certo)}</span><br><br> `;
+        }else if (ano_nascimento <= 1970){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span> <br><br> `;
+        }else if (ano_nascimento <= 1975){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span>  <br><br>`;
+        }else if (ano_nascimento <= 1980){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>  `;
+        }else if (ano_nascimento <= 1985){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+          <br> Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br> <br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span>  <br><br>`;
+        }else if (ano_nascimento <= 1990){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br> <br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br> `;
+        }else if (ano_nascimento <= 1995){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br> <span>${(poesia_aleatoria_certo)}</span> <br><br> `;
+        }else if (ano_nascimento <= 2000){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br> Reservamos um momento para que a arte respire através da sua leitura. 
+            <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+            <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br> <span>${(poesia_aleatoria_certo)}</span> <br><br> `;
+        }else if (ano_nascimento <= 2005){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br> <span>${(poesia_aleatoria_certo)}</span><br><br>  `;
+        }else if (ano_nascimento <= 2010){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura.
+            <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+            <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br> <span><br><br>${(poesia_aleatoria_certo)}</span>  `;
+        }else if (ano_nascimento <= 2015){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br> <span><br><br>${(poesia_aleatoria_certo)}</span>  `;
+        }else if (ano_nascimento <= 2020){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br><br>Sua poesia é:<br><br> <span>${(poesia_aleatoria_certo)}</span><br><br>  `;
+        }else{}
+        
+        //Estações, aqui explica um pouco a estação de forma poetica
+
+        if(estacao_do_ano == 'Primavera'){
+            div_mensagem.innerHTML += `${(estacao_do_ano)}<br><br>
+            O Desabrochar é uma Invasão<br><br>
+            A primavera não é um convite, é uma urgência que rompe a casca.
+            <br>É quando o que estava guardado dentro do solo escuro decide 
+            <br>que a luz, por mais que queime, é o único caminho. <br>
+            <br>Existe uma dor nesse crescimento, uma espécie de violência mansa no abrir das pétalas.
+            <br>As pessoas pensam que florescer é um evento estético, mas é um evento de sobrevivência.
+            <br> É o momento em que a vida cansa de ser semente e aceita o risco de ser cor. 
+            <br>E ser cor é estar exposto. É abrir o peito para o vento e para a chuva sem ter onde se esconder.<br>
+            <br>Olhe para as flores: elas não estão sorrindo, elas estão existindo com uma força absoluta.
+            <br> Estão ali, imóveis, sendo tudo o que podem ser antes que o tempo as leve. Primavera é isso: 
+            <br>a coragem de ser vulnerável diante do mundo, sabendo que a beleza é apenas o intervalo entre dois invernos.
+            <br><br> Clarice Lispector<br><br>
+            <img src="flores.jpg" alt="Flores" width="200px">`;
+        }else if(estacao_do_ano == 'Verão' ){
+             div_mensagem.innerHTML += `${(estacao_do_ano)} `;
+        }else if(estacao_do_ano == 'outono' ){
+             div_mensagem.innerHTML += `${(estacao_do_ano)} `;
+        }else if(estacao_do_ano == 'inverno' ){
+             div_mensagem.innerHTML += `${(estacao_do_ano)}  `;
+        }
+        
+        
+
+
+        //Fotografia, explica a história daquele estilo de  fotografia em si, e de forma poetica
+
+        if (fotografia == analogica) {
+            div_mensagem.innerHTML += `${analogica} <br>`;
+        } else if (fotografia == pretoEBranco) {
+            div_mensagem.innerHTML += `${pretoEBranco} `;
+        } else if (fotografia == macro) {
+            div_mensagem.innerHTML = `${macro} `;
+        } else if (fotografia == retrato) {
+            div_mensagem.innerHTML += `${retrato} `;
+        } else if (fotografia == paisagem) {
+            div_mensagem.innerHTML += `${paisagem} `;
+        } else if (fotografia == cyberpunk) {
+            div_mensagem.innerHTML += `${cyberpunk} `;
+        } else if (fotografia == vintage) {
+            div_mensagem.innerHTML += `${vintage} `;
+        } else if (fotografia == minimalista) {
+            div_mensagem.innerHTML += `${minimalista} `;
+        } else if (fotografia == streetPhotography) {
+            div_mensagem.innerHTML += `${streetPhotography} `;
+        } else if (fotografia == longaExposicao) {
+            div_mensagem.innerHTML += `${longaExposicao} `;
+        } else if (fotografia == documental) {
+            div_mensagem.innerHTML += `${documental} `;
+        } else if (fotografia == moda) {
+            div_mensagem.innerHTML += `${moda} `;
+        } else if (fotografia == surrealista) {
+            div_mensagem.innerHTML += `${surrealista} `;
+        } else if (fotografia == arquitetura) {
+            div_mensagem.innerHTML += `${arquitetura} `;
+        } else if (fotografia == gastronomica) {
+            div_mensagem.innerHTML += `${gastronomica} `;
+        } else if (fotografia == fineArt) {
+            div_mensagem.innerHTML += `${fineArt} `;
+        } else if (fotografia == subaquatica) {
+            div_mensagem.innerHTML += `${subaquatica} `;
+        } else if (fotografia == astrofotografia) {
+            div_mensagem.innerHTML += `${astrofotografia} `;
+        } else if (fotografia == infravermelho) {
+            div_mensagem.innerHTML += `${infravermelho} `;
+        } else if (fotografia == gotica) {
+            div_mensagem.innerHTML += `${gotica} `;
+        }
+
+        
+        //Cada estação ser um fundo diferente ideia
+    }
+    }
+</script>

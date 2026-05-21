@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="caixa">
+    <span style="color: black;"><h1>Simulador de diagnóstico de Potencial em Fotografia Poética</h1></span>
+    <span style="color: black; font-style: italic;">
+    <h4>
+        Esta ferramenta foi criada para medir sua inclinação natural para a arte. <br> 
+        Analisamos o equilíbrio entre seus versos, seu olhar fotográfico e sua dedicação para revelar seu nível criativo hoje. <br> 
+        O objetivo é projetar o tamanho do legado que você pode construir se continuar cultivando esse dom. <br> 
+        Responda com sinceridade e descubra o verdadeiro peso do seu potencial artístico. <br><br>
+        <span style="color: rgb(248, 0, 0); font-style: italic;">Digite apenas números abaixo.</span>
+    </h4>
+    </span>
+  
+<div class="parte1">
+    <span style="color:black; ;">Quantas frases, versos ou reflexões você escreve aproximadamente por semana(mesmo que seja no bloco de notas)?</span>
+    <br>
+    <input type="text" id="ipt_escreve_por_semana">
+    <br><br>
+    </div>
+
+<div class="parte2">
+    <span style="color: black;">Quantas fotos com intenção artística você tira na semana no seu celular aproximadamente?</span>
+    <br>
+    <input type="text" id="ipt_fotos_tiradas_semana">
+    <br><br>
+    </div>
+
+<div class="parte3">
+    <span style="color: black;">Quantas horas por semana você dedica a ler poesia ou observar arte?</span>
+    <br>
+    <input type="text" id="ipt_dedicacao_na_arte">
+    <br><br>
+    </div>
+
+<div class="parte4">
+    <span style="color: black;">De 1 a 10, o quanto você sente que suas histórias estão se perdendo no digital sem serem impressas?</span>
+    <br>
+    <input type="text" id="ipt_preocupacao">
+    <br><br>
+    </div>
+
+<div class="botao">
+    <button onclick="mostrarMensagem()">Verificar potencial</button><br>
+    <div id="div_mensagem"></div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    function mostrarMensagem(){
+        let escreve_por_semana = ipt_escreve_por_semana.value; // Essa variavel da primeira pergunta.
+        let fotos_tiradas_semana = ipt_fotos_tiradas_semana.value; //Variavel da segunda pergunta.
+        let dedicacao_na_arte = ipt_dedicacao_na_arte.value; //Terceira pergunta.
+        let preocupacao = ipt_preocupacao.value; // Ultima pergunta.
+        let vetor = ['@','/','#','%','-','+','*','¨', '&', '()', ';',':',',','.','>','<','|']; // Validação de caracteres especiais.
+        div_mensagem.innerHTML = '';
+
+        //Validações 
+        if(escreve_por_semana <  0 || fotos_tiradas_semana < 0 || dedicacao_na_arte < 0 || preocupacao < 0){
+            div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;
+
+        }else if (vetor.includes(escreve_por_semana) || vetor.includes(fotos_tiradas_semana) || vetor.includes(dedicacao_na_arte) || vetor.includes(preocupacao) ){
+            div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;
+
+        }else if (Number(escreve_por_semana) != escreve_por_semana || Number(fotos_tiradas_semana) != fotos_tiradas_semana || Number(dedicacao_na_arte) != dedicacao_na_arte || Number(preocupacao) != preocupacao) {
+            div_mensagem.innerHTML = `<span style="color: brown;"><br> Digite apenas números</span>`;
+
+        }else if(escreve_por_semana <= " " || fotos_tiradas_semana <= "" || dedicacao_na_arte <= " " || preocupacao <= " "){
+                div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;
+                
+        }else if(preocupacao > 10 || preocupacao < 0){
+                div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;
+        }else if(escreve_por_semana > 300){
+                div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;    
+        }else if(fotos_tiradas_semana > 300){
+                div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;   
+        }else if(dedicacao_na_arte > 300){
+                div_mensagem.innerHTML = `<span style="color: brown;"><br> Preencha os campos com valor válido </span> `;
+        }else{
+        // Verifica se as entradas são números válidos atraves do Number, que transforma a variavel em numero.
+        
+        // Aqui vai servir para ver quanto vai valer as pontuações do usuario
+        let pontuacao1 = Number(ipt_escreve_por_semana.value) * 10; // Poesia vale mais esforço
+        let pontuacao2 = Number(ipt_fotos_tiradas_semana.value) * 5;  // Foto é intermediário
+        let pontuacao3 = Number(ipt_dedicacao_na_arte.value) * 15;   // Estudo/Leitura vale muito
+        let pontuacao4 = Number(ipt_preocupacao.value) * 2; // Preocupação é importante
+        let categoria = ''; // Vai ser em qual nivel ele está
+        let significado_da_categoria = '';
+
+        //Vamos começar a calcular as pontuações
+        let bonus_preocupacao = 0;
+        for(let i = 1; i <= pontuacao4; i++){
+            bonus_preocupacao += 2; // Cada nível de preocupação soma 5 pontos
+        }
+
+        let total = pontuacao1 + pontuacao2 + pontuacao3 + bonus_preocupacao;
+        
+        if (total <= 10){
+            categoria = "Potencial inicial";
+            significado_da_categoria = "No começo só havia o vazio transbordando com infinitas possibilidades das quais uma delas é você. <br> Sinto que a uma chama a qual está se ascendendo.<br> <b><i>Boa sorte em sua jornada, espero que encontre a clareza."
+        } else if (total <= 100){
+            categoria = "Potencial médio";
+            significado_da_categoria = "O vazio tem o valor e a semelhança do pleno. <br> Um meio de obter é não procurar, um meio de ter é o de não pedir e somente acreditar que o silêncio <br> que eu creio em mim é resposta a meu – a meu mistério. <br. Se tivesse a tolice de se perguntar “quem sou eu?”<br> cairia estatelada e em cheio no chão. <br><b><i>Você está indo bem, mas ainda precisa de mais, vejo potencial em você.";
+        } else if (total <= 1000){
+            categoria = "Potencial intermediario";
+            significado_da_categoria ="Escrevo como se estivesse dormindo e sonhando: <br. as frases desconexas como no sonho. É difícil, estando acordado,  <br> sonhar livremente nos meus remotos mistérios.<br><b><i>Vejo enorme potencial em você, continue assim e abrace o poeta que está dentro de você. ";
+                //Tive que usar o atalho pois o span não foi nas frases
+        } else {
+            categoria = "Potencial muito alto";
+            significado_da_categoria = "A escuridão não pode expulsar a escuridão,<br> apenas a luz pode fazer isso. <br>O ódio não pode expulsar o ódio, só o amor pode fazer isso. <br><b><i> Você está além, sempre explorando até onde pode ir.<br><b><i> Te admiro muito por isso, nunca mude quem é, está em um ótimo caminho.";
+        }
+        let total_semanal = pontuacao1 + pontuacao2 + pontuacao3 + bonus_preocupacao;
+        // Projeção: Multiplicamos a pontuação semanal pelo número de semanas
+        let total_6_meses = total_semanal * 26;
+        let total_1_ano = total_semanal * 52;
+        //Categoria de 1 ano
+        let categoria_1 = total_1_ano;
+        categoria_1 = '';
+        if (total_semanal <= 10){
+            categoria_1 = "Potencial médio";
+        } else if (total_semanal <= 100){
+            categoria_1 = "Potencial intermediario"
+        } else if(total_semanal <=1000) {
+            categoria_1= "Potencial muito alto"
+        }else {
+            categoria_1 = "Além do seu tempo"
+        }
+        
+        div_mensagem.innerHTML =`
+            <span style="font-weight: bold;"><br>Sua categoria hoje:</span>${categoria} <br>
+            <span style="font-weight: bold;">Pontuação semanal: </span>${total_semanal} <br><br>
+            <span style="font-style: italic;">"Se você mantiver esse ritmo de criação e observação, este será o tamanho do seu legado:"</span><br><br>
+            <span style="font-weight: bold;"> Em 6 meses</span>, mantendo esse ritmo, você terá acumulado <b>${total_6_meses}</b> pontos de experiência poética. <br>
+            <span style="font-weight: bold;">   Em 1 ano </span>, você atingirá a marca de <b>${total_1_ano}</b> pontos!<br><br>
+            <span style="font-weight: bold;"> Sua categoria em 1 ano será :</span>${categoria_1}<br>
+            <br>${significado_da_categoria}<br><br><br>
+           
+        `;
+        div_mensagem.innerHTML+=  `
+            <span style="font-style: italic;">
+            <span style="font-weight: bold;">Agora que viu seus resultados</span>, entenda como funciona o nosso sistema de pontuação:
+            <br><br>
+            <span style="font-weight: bold;">  -- ✍️ Cada texto escrito:</span>Vale 10 pontos (Dá mais trabalho criar do zero).<br><br>
+            <span style="font-weight: bold;">  -- 📸 Cada foto tirada:</span>Vale 5 pontos (É o seu olhar).<br><br>
+            <span style="font-weight: bold;">  -- 📖 Cada hora de estudo:</span>Vale 15 pontos (Conhecimento é base,é o que mais exige esforço).<br><br>
+            <span style="font-weight: bold;">  -- 🎯 Sua vontade (1-10):</span>Soma um bônus de 5 pontos para cada nível.<br><br>
+            Tudo isso é somado para gerar seu potencial, que cresce conforme você mantém o ritmo.<br>
+            <br><br></span>`
+        div_mensagem.innerHTML += ` 
+            <span style="font-weight: bold;">Potencial Inicial</span><br><br>
+            Representa o marco zero da sua jornada. É o estágio de descoberta, <br>onde você sai da inércia e começa a transformar possibilidades em realidade. <br>Aqui, o foco é o despertar da sua capacidade.<br><br>
+
+            <span style="font-weight: bold;">Potencial Médio</span><br><br>
+            Indica um estado de desenvolvimento constante.<br> Você já superou a fase inicial, possui uma base estabelecida e está em um processo <br> de amadurecimento,<br> onde o progresso acontece de forma mais consciente e silenciosa.<br><br>
+
+            <span style="font-weight: bold;">Potencial Intermediário</span><br><br>
+            Reflete um nível de domínio onde a técnica e a intuição se misturam.<br> Você já demonstra uma conexão profunda com o que faz, permitindo que a criatividade <br>flua com liberdade e os resultados apareçam de forma mais expressiva.<br><br>
+
+            <span style="font-weight: bold;">Potencial Muito Alto</span><br><br>
+            Identifica um estágio de excelência e clareza.<br> Você atingiu um patamar de alta performance e equilíbrio, <br>sendo capaz de superar obstáculos com resiliência e atuar como uma influência<br> positiva no ambiente ao seu redor.<br><br>
+
+            <span style="font-weight: bold;">Além do seu Tempo</span><br><br>
+            Representa a transcendência das métricas comuns.<br< É o nível de quem rompe as expectativas de crescimento anual e atinge uma maturidade<br> que desafia a cronologia normal,<br> redefinindo o que é possível alcançar.<br><br><br>
+
+            <span style="font-size: 10px;">Fontes usadas:https://www.pensador.com/frases_sobre_comeco/;<br>
+            Fontes usadas:https://www.pensador.com/poemas_vazio/ <br>
+            Fontes usadas:https://www.pensador.com/frases_e_poesias/ <br>
+            Fontes usadas:https://www.pensador.com/frases_de_escuridao/ <br>
+            Ultimo acesso: 11/04/2026.
+            </span>
+            `;
+        }
+        }
+</script>
