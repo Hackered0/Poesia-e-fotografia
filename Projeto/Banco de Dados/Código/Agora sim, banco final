@@ -1,0 +1,104 @@
+USE fotografia_poetica;
+
+CREATE TABLE categoria (
+    idcategoria INT PRIMARY KEY AUTO_INCREMENT,
+    nome_categoria VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE usuario (
+    idusuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) UNIQUE NOT NULL,
+    data_nascimento DATE NOT NULL,
+    cpf CHAR(11) UNIQUE NOT NULL,
+    email VARCHAR(200) UNIQUE NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    status VARCHAR(10) DEFAULT 'Ativo',
+    CONSTRAINT chk_status CHECK (status IN ('Ativo', 'Inativo'))
+);
+
+CREATE TABLE foto_poesia (
+    idfotografia INT PRIMARY KEY AUTO_INCREMENT,
+    titulo_da_obra VARCHAR(100) NOT NULL,
+    url_da_imagem TEXT NOT NULL,
+    poesia TEXT,
+    descricao_foto_poesia TEXT NOT NULL,
+    data_publicacao DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    fk_usuario INT,
+    fk_categoria INT,
+    CONSTRAINT fk_post_usuario FOREIGN KEY (fk_usuario) REFERENCES usuario(idusuario),
+    CONSTRAINT fk_post_categoria FOREIGN KEY (fk_categoria) REFERENCES categoria(idcategoria)
+);
+
+CREATE TABLE comentario (
+    idcomentario INT PRIMARY KEY AUTO_INCREMENT,
+    comentario TEXT,
+    data_comentario DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    sun INT,
+    fk_usuario INT,
+    fk_poesia INT,
+    CONSTRAINT fk_coment_usuario FOREIGN KEY (fk_usuario) REFERENCES usuario(idusuario),
+    CONSTRAINT fk_coment_poesia FOREIGN KEY (fk_poesia) REFERENCES foto_poesia(idfotografia)
+);
+
+CREATE TABLE likes (
+    idlikes INT PRIMARY KEY AUTO_INCREMENT,
+    data_like DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    sun INT,
+    fk_usuario INT,
+    fk_poesia INT,
+    CONSTRAINT fk_like_usuario FOREIGN KEY (fk_usuario) REFERENCES usuario(idusuario),
+    CONSTRAINT fk_like_poesia FOREIGN KEY (fk_poesia) REFERENCES foto_poesia(idfotografia),
+    CONSTRAINT uc_usuario_poesia UNIQUE (fk_usuario, fk_poesia)
+);
+
+CREATE TABLE favorito (
+    id_favorito INT PRIMARY KEY AUTO_INCREMENT,
+    fk_usuario INT,
+    fk_poesia INT,
+    FOREIGN KEY (fk_usuario) REFERENCES usuario(idusuario),
+    FOREIGN KEY (fk_poesia) REFERENCES foto_poesia(idfotografia),
+    UNIQUE (fk_usuario, fk_poesia)
+);
+
+CREATE TABLE faq (
+    idfaq INT PRIMARY KEY AUTO_INCREMENT,
+    pergunta VARCHAR(255) NOT NULL,
+    resposta TEXT NOT NULL,
+    categoria_faq VARCHAR(50),
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP()
+);
+
+INSERT INTO categoria (nome_categoria) VALUES
+('Melancolia'),
+('Romance'),
+('Mistério'),
+('Fantasia'),
+('Distopia');
+
+CREATE VIEW vw_foto_poesia_resumo AS
+SELECT
+    fp.idfotografia,
+    fp.titulo_da_obra,
+    fp.descricao_foto_poesia,
+    fp.data_publicacao,
+    u.nome AS autor,
+    c.nome_categoria AS categoria,
+    COUNT(DISTINCT l.idlikes) AS total_likes,
+    COUNT(DISTINCT cm.idcomentario) AS total_comentarios
+FROM foto_poesia fp
+JOIN usuario u
+ON fp.fk_usuario = u.idusuario
+JOIN categoria c
+ON fp.fk_categoria = c.idcategoria
+LEFT JOIN likes l
+ON fp.idfotografia = l.fk_poesia
+LEFT JOIN comentario cm
+ON fp.idfotografia = cm.fk_poesia
+GROUP BY
+    fp.idfotografia,
+    fp.titulo_da_obra,
+    fp.descricao_foto_poesia,
+    fp.data_publicacao,
+    u.nome,
+    c.nome_categoria;
