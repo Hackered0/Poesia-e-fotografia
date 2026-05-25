@@ -6,50 +6,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Dashboards</title>
+    <title>Lírion | Dashboard</title>
 
     <link rel="stylesheet" href="./../css/dashboards.css">
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="dashboards.css">
 
-    <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="validarSessao(), inicializarDashboard(), atualizacaoPeriodica()">
+<body onload="inicializarDashboard()">
 
     <div class="janela">
         <div class="header-left">
             <h1>Lírion</h1>
 
             <div class="hello">
-                <h3>Olá, Bem-vindo(a)</span>!</h3>
+                <h3>
+                    Olá,
+                    <span id="b_usuario">Usuário</span>
+                    !
+                </h3>
             </div>
-
 
             <div class="btn-nav-grafico">
                 <h3>Gráficos</h3>
             </div>
 
-            <div class="btn-nav">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
 
             <div class="btn-nav">
-                <a href="./cards.html">
+                <a href="publicar.html">
                     <h3>Publicar</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <a href="./cards.html">
-                    <h3>Suporte 🎧</h3>
                 </a>
             </div>
 
@@ -58,12 +48,10 @@
             </div>
         </div>
 
-        <!-- Conteúdo principal -->
         <div class="conteudo-principal">
 
             <div id="alerta"></div>
 
-            <!-- Título -->
             <div class="topo">
                 <h2 class="topo-titulo">
                     Suas criações — <em>fotografia poética</em>
@@ -71,42 +59,39 @@
                 <p class="topo-subtitulo">DASHBOARD · MÉTRICAS PESSOAIS</p>
             </div>
 
-            <!-- Dashboard -->
             <div class="dashboard">
 
-                <!-- Cards de métricas -->
                 <div class="grade-metricas">
                     <div class="card-metrica">
                         <p class="card-metrica-label">Obras publicadas</p>
-                        <p class="card-metrica-numero" id="totalObras">—</p>
+                        <p class="card-metrica-numero" id="totalObras">0</p>
                         <p class="card-metrica-sub positivo">fotografias poéticas</p>
                     </div>
 
                     <div class="card-metrica">
                         <p class="card-metrica-label">Contemplações</p>
-                        <p class="card-metrica-numero" id="totalLikes">—</p>
+                        <p class="card-metrica-numero" id="totalLikes">0</p>
                         <p class="card-metrica-sub positivo">likes recebidos</p>
                     </div>
 
                     <div class="card-metrica">
                         <p class="card-metrica-label">Ressonâncias</p>
-                        <p class="card-metrica-numero" id="totalRessonancias">—</p>
+                        <p class="card-metrica-numero" id="totalRessonancias">0</p>
                         <p class="card-metrica-sub">curtidas + comentários</p>
                     </div>
 
                     <div class="card-metrica">
                         <p class="card-metrica-label">Vozes recebidas</p>
-                        <p class="card-metrica-numero" id="totalComentarios">—</p>
+                        <p class="card-metrica-numero" id="totalComentarios">0</p>
                         <p class="card-metrica-sub">comentários</p>
                     </div>
                 </div>
 
-                <!-- Gráfico: Clima Poético das Obras  -->
                 <div class="card-grande">
                     <p class="card-grande-titulo">CLIMA POÉTICO DAS OBRAS</p>
 
                     <div id="climaCarregando" style="text-align:center; color:#888; padding: 40px 0;">
-                         Carregando dados...
+                        Carregando dados...
                     </div>
 
                     <div id="climaVazio" class="display-none" style="text-align:center; color:#888; padding: 40px 0;">
@@ -120,7 +105,6 @@
                     </div>
                 </div>
 
-                <!-- Inspiração do dia -->
                 <div class="card-grande-inspiracao">
                     <p class="card-grande-titulo">INSPIRAÇÃO DO DIA</p>
 
@@ -129,19 +113,375 @@
                         <span>— sugestão gerada para você</span>
                     </div>
 
-                    <button class="botao-inspirar" onclick="window.location.href='../Index.html'">
+                    <button class="botao-inspirar" onclick="window.location.href='../index.html'">
                         Inspirar próxima obra ↗
                     </button>
                 </div>
 
             </div>
-            <!-- fim .dashboard -->
 
         </div>
-        <!-- fim conteúdo principal -->
 
     </div>
-    <!-- fim .janela -->
 
 </body>
+
 </html>
+
+<script>
+
+var grafico = null;
+
+function pegarNomeUsuario() {
+
+    var nome = sessionStorage.NOME_USUARIO;
+
+    if (
+        nome == undefined ||
+        nome == null ||
+        nome == "" ||
+        nome == "undefined" ||
+        nome == "null"
+    ) {
+
+        if (
+            sessionStorage.USUARIO != undefined &&
+            sessionStorage.USUARIO != null &&
+            sessionStorage.USUARIO != "" &&
+            sessionStorage.USUARIO != "undefined"
+        ) {
+
+            var usuario = JSON.parse(sessionStorage.USUARIO);
+
+            if (
+                usuario.nome != undefined &&
+                usuario.nome != null &&
+                usuario.nome != "" &&
+                usuario.nome != "undefined"
+            ) {
+                nome = usuario.nome;
+            }
+
+        }
+
+    }
+
+    if (
+        nome == undefined ||
+        nome == null ||
+        nome == "" ||
+        nome == "undefined" ||
+        nome == "null"
+    ) {
+        nome = "Usuário";
+    }
+
+    return nome;
+
+}
+
+
+function pegarIdUsuario() {
+
+    var id = sessionStorage.ID_USUARIO;
+
+    if (
+        id == undefined ||
+        id == null ||
+        id == "" ||
+        id == "undefined" ||
+        id == "null"
+    ) {
+
+        if (
+            sessionStorage.USUARIO != undefined &&
+            sessionStorage.USUARIO != null &&
+            sessionStorage.USUARIO != "" &&
+            sessionStorage.USUARIO != "undefined"
+        ) {
+
+            var usuario = JSON.parse(sessionStorage.USUARIO);
+
+            if (
+                usuario.id != undefined &&
+                usuario.id != null &&
+                usuario.id != ""
+            ) {
+                id = usuario.id;
+            }
+
+            if (
+                usuario.idUsuario != undefined &&
+                usuario.idUsuario != null &&
+                usuario.idUsuario != ""
+            ) {
+                id = usuario.idUsuario;
+            }
+
+        }
+
+    }
+
+    return id;
+
+}
+
+
+function inicializarDashboard() {
+
+    var nome = pegarNomeUsuario();
+
+    document.getElementById("b_usuario").innerHTML = nome;
+
+    carregarMetricas();
+    carregarGrafico();
+
+}
+
+
+function carregarMetricas() {
+
+    var idUsuario = pegarIdUsuario();
+
+    if (
+        idUsuario == undefined ||
+        idUsuario == null ||
+        idUsuario == "" ||
+        idUsuario == "undefined"
+    ) {
+
+        carregarMetricasLocal();
+        return;
+
+    }
+
+    fetch("/categorias/metricas/" + idUsuario)
+
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+                return resposta.json();
+            } else {
+                carregarMetricasLocal();
+            }
+
+        })
+
+        .then(function (dados) {
+
+            if (dados == undefined) {
+                carregarMetricasLocal();
+                return;
+            }
+
+            var obras = dados.total_obras || 0;
+            var likes = dados.total_likes || 0;
+            var comentarios = dados.total_comentarios || 0;
+
+            document.getElementById("totalObras").innerHTML = obras;
+            document.getElementById("totalLikes").innerHTML = likes;
+            document.getElementById("totalComentarios").innerHTML = comentarios;
+            document.getElementById("totalRessonancias").innerHTML = likes + comentarios;
+
+        })
+
+        .catch(function () {
+
+            carregarMetricasLocal();
+
+        });
+
+}
+
+
+function carregarMetricasLocal() {
+
+    var publicacoes = JSON.parse(localStorage.getItem("publicacoes_lirion") || "[]");
+
+    var obras = 0;
+    var likes = 0;
+    var comentarios = 0;
+
+    for (var i = 0; i < publicacoes.length; i++) {
+
+        obras++;
+
+        if (publicacoes[i].likes != undefined) {
+            likes = likes + publicacoes[i].likes;
+        }
+
+        if (publicacoes[i].comentarios != undefined) {
+            comentarios = comentarios + publicacoes[i].comentarios.length;
+        }
+
+    }
+
+    document.getElementById("totalObras").innerHTML = obras;
+    document.getElementById("totalLikes").innerHTML = likes;
+    document.getElementById("totalComentarios").innerHTML = comentarios;
+    document.getElementById("totalRessonancias").innerHTML = likes + comentarios;
+
+}
+
+
+function carregarGrafico() {
+
+    var idUsuario = pegarIdUsuario();
+
+    if (
+        idUsuario == undefined ||
+        idUsuario == null ||
+        idUsuario == "" ||
+        idUsuario == "undefined"
+    ) {
+
+        carregarGraficoLocal();
+        return;
+
+    }
+
+    fetch("/categorias/obras-por-categoria/" + idUsuario)
+
+        .then(function (resposta) {
+            if (resposta.ok) {
+                return resposta.json();
+            } else {
+                carregarGraficoLocal();
+            }
+        })
+
+        .then(function (dados) {
+
+            if (dados == undefined) {
+                carregarGraficoLocal();
+                return;
+            }
+
+            montarGraficoComBanco(dados);
+
+        })
+
+        .catch(function () {
+            carregarGraficoLocal();
+        });
+
+}
+
+
+function montarGraficoComBanco(dados) {
+
+    var categorias = [];
+    var valores = [];
+
+    for (var i = 0; i < dados.length; i++) {
+
+        categorias.push(dados[i].nome_categoria);
+        valores.push(dados[i].total_obras);
+
+    }
+
+    mostrarGrafico(categorias, valores);
+
+}
+
+
+function carregarGraficoLocal() {
+
+    var publicacoes = JSON.parse(localStorage.getItem("publicacoes_lirion") || "[]");
+
+    var categorias = ["Melancolia", "Romance", "Mistério", "Fantasia", "Distopia"];
+    var valores = [0, 0, 0, 0, 0];
+
+    for (var i = 0; i < publicacoes.length; i++) {
+
+        if (publicacoes[i].categoria == "Melancolia") {
+            valores[0]++;
+        } else if (publicacoes[i].categoria == "Romance") {
+            valores[1]++;
+        } else if (publicacoes[i].categoria == "Mistério") {
+            valores[2]++;
+        } else if (publicacoes[i].categoria == "Fantasia") {
+            valores[3]++;
+        } else if (publicacoes[i].categoria == "Distopia") {
+            valores[4]++;
+        }
+
+    }
+
+    mostrarGrafico(categorias, valores);
+
+}
+
+
+function mostrarGrafico(categorias, valores) {
+
+    var temDados = false;
+
+    for (var i = 0; i < valores.length; i++) {
+        if (valores[i] > 0) {
+            temDados = true;
+        }
+    }
+
+    document.getElementById("climaCarregando").style.display = "none";
+
+    if (temDados == false) {
+
+        document.getElementById("climaVazio").style.display = "block";
+        document.getElementById("climaGraficoContainer").style.display = "none";
+
+        return;
+
+    }
+
+    document.getElementById("climaVazio").style.display = "none";
+    document.getElementById("climaGraficoContainer").style.display = "block";
+
+    var ctx = document.getElementById("climaChart").getContext("2d");
+
+    if (grafico != null) {
+        grafico.destroy();
+    }
+
+    grafico = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: categorias,
+            datasets: [{
+                label: "Obras",
+                data: valores,
+                backgroundColor: [
+                    "rgba(93, 202, 165, 0.4)",
+                    "rgba(155, 155, 255, 0.4)",
+                    "rgba(245, 166, 35, 0.4)",
+                    "rgba(237, 147, 177, 0.4)",
+                    "rgba(224, 107, 107, 0.4)"
+                ],
+                borderColor: [
+                    "rgba(93, 202, 165, 1)",
+                    "rgba(155, 155, 255, 1)",
+                    "rgba(245, 166, 35, 1)",
+                    "rgba(237, 147, 177, 1)",
+                    "rgba(224, 107, 107, 1)"
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+}
+
+
+function atualizacaoPeriodica() {
+
+    setInterval(function () {
+        carregarMetricas();
+        carregarGrafico();
+    }, 5000);
+
+}
+
+</script>
