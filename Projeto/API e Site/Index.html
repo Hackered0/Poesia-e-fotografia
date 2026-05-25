@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lírion | Home</title>
+
+    <script src="./js/sessao.js"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+<style>
+/* PUBLICAÇÕES */
+
+/* CONSERTO PUBLICAÇÕES */
+
+.grid-publicacoes{
+display:flex;
+justify-content:center;
+}
+
+.card-publicacao{
+
+width:800px !important;
+
+max-width:800px !important;
+
+padding:35px !important;
+
+margin-top:40px;
+
+}
+
+.card-publicacao p{
+
+line-height:40px !important;
+
+}
+
+.card-publicacao button{
+
+width:auto !important;
+
+height:38px !important;
+
+padding:0 18px !important;
+
+border-radius:999px !important;
+
+background:#17171d !important;
+
+border:1px solid #333 !important;
+
+color:#d4d4d4 !important;
+
+font-size:13px !important;
+
+margin-right:10px !important;
+
+}
+
+.card-publicacao button:hover{
+
+background:#23232d !important;
+
+}
+
+.acoes-card{
+
+display:flex !important;
+
+gap:12px !important;
+
+margin-top:25px !important;
+
+}
+
+.card-publicacao h3{
+
+font-size:40px !important;
+
+margin-bottom:25px !important;
+
+}
+
+.card-publicacao{
+
+overflow-wrap:break-word;
+
+}
+</style>
+
+</head>
+
+<body>
+
+    <!-- header inicio -->
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Lírion</h1>
+            <ul class="navbar">
+                <li class="agora">
+                    <a href="#">inicial</a>
+                </li>
+                
+                <li>
+                    <a href="sobre.html">Saber Mais</a>
+                </li>
+                <li>|</li>
+              <li>
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- header fim -->
+
+    <!-- hero section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Lírion</h2>
+            <p>Um espaço onde a fotografia e a poesia<br>se encontram para revelar o que<br>os sentimentos não dizem em palavras</p>
+            <a href="#publicacoes" class="botao-hero">Explorar Obras</a>
+        </div>
+    </div>
+    <!-- hero section fim -->
+
+    <!-- publicacoes -->
+<section class="publicacoes-container">
+
+<div class="container-publicacoes">
+
+<div class="topo-publicacoes">
+
+<h2>Obras Recentes</h2>
+
+<p>Descubra as criações mais recentes da comunidade Lírion</p>
+
+</div>
+
+<div id="carregando">
+Carregando publicações...
+</div>
+
+<div id="grid-publicacoes"></div>
+
+</div>
+
+</section>
+<!-- publicacoes fim -->
+
+<!-- MANUAL -->
+<section class="manual-postagem">
+
+    <div class="manual-card">
+
+        <span class="manual-tag">
+            COMO PUBLICAR
+        </span>
+
+        <h2>
+            Compartilhe sua arte no Lírion
+        </h2>
+
+        <p>
+            Em poucos passos você já pode publicar suas fotografias e poesias.
+        </p>
+
+        <div class="passos-manual">
+
+            <div class="passo">
+                <span>01</span>
+                <h3>Crie sua conta</h3>
+                <p>
+                    Faça seu cadastro gratuitamente para entrar na comunidade.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span>02</span>
+                <h3>Faça login</h3>
+                <p>
+                    Acesse sua conta para liberar as funcionalidades da plataforma.
+                </p>
+            </div>
+
+            <div class="passo">
+                <span>03</span>
+                <h3>Publique sua obra</h3>
+                <p>
+                    Vá até a aba de publicações e compartilhe sua fotografia poética.
+                </p>
+            </div>
+
+        </div>
+
+        <a href="cadastro.html" class="botao-manual">
+            Começar agora
+        </a>
+
+    </div>
+
+</section>
+
+
+ <!--Quiz -->
+ <div class="bodyfalsificado">
+  <div class="caixa">
+    <div class="cabecalho">
+        <span><h1> Descubra sua poesia </h1></span>
+    </div>
+    <div class="formulario">
+        <div class="item-campo">
+            <span>Digite seu primeiro nome: </span>  
+            <input type="text" id="ipt_primeiro_nome">  
+        </div>
+        <div class="item-campo">
+            <span>Digite o seu ano de nascimento:</span>  
+            <select id="sel_ano_nascimento">
+                <option value="opcao">Escolha uma opção</option>
+                <option value="1940">1940</option>
+                <option value="1941">1941</option>
+                <option value="1942">1942</option>
+                <option value="1943">1943</option>
+                <option value="1944">1944</option>
+                <option value="1945">1945</option>
+                <option value="1946">1946</option>
+                <option value="1947">1947</option>
+                <option value="1948">1948</option>
+                <option value="1949">1949</option>
+                <option value="1950">1950</option>
+                <option value="1951">1951</option>
+                <option value="1952">1952</option>
+                <option value="1953">1953</option>
+                <option value="1954">1954</option>
+                <option value="1955">1955</option>
+                <option value="1956">1956</option>
+                <option value="1957">1957</option>
+                <option value="1958">1958</option>
+                <option value="1959">1959</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>  
+          </div>
+        <div class="item-campo">
+            <span>Selecione a sua estação do ano favorita:</span>  
+            <select id="sel_estacao_do_ano">
+                <option value="opcao">Escolha uma opção</option>
+                <option value="Primavera">Primavera</option>
+                <option value="Verão">Verão</option>
+                <option value="Outono">Outono</option>
+                <option value="Inverno">Inverno</option>
+            </select>  
+        </div>
+    <div class="item-campo">
+            <span>Selecione seu estilo de fotografia favorito:</span>  
+            <select id="sel_fotografia">
+                <option value="opcao">Escolha uma opção</option>
+                <option value="Analógica"></option>
+                <option value="Preto e Branco">Preto e Branco</option>
+                <option value="Macro">Macro</option>
+                <option value="Retrato">Retrato</option>
+                <option value="Paisagem">Paisagem</option>
+                <option value="Cyberpunk">Cyberpunk</option>
+                <option value="Vintage">Vintage</option>
+                <option value="Minimalista">Minimalista</option>
+                <option value="Street Photography">Street Photography</option>
+                <option value="Longa Exposição">Longa Exposição</option>
+                <option value="Documental">Documental</option>
+                <option value="Moda">Moda</option>
+                <option value="Surrealista">Surrealista</option>
+                <option value="Arquitetura">Arquitetura</option>
+                <option value="Gastronômica">Gastronômica</option>
+                <option value="Fine Art">Fine Art</option>
+                <option value="Subaquática">Subaquática</option>
+                <option value="Astrofotografia">Astrofotografia</option>
+                <option value="Infravermelho">Infravermelho</option>
+                <option value="Gótica">Gótica</option>
+            </select>  
+       </div>
+    </div>
+</div>
+
+<div class="botao">
+    <button onclick="mostrarMensagem()">Verificar poesia</button>
+</div>
+<div id="div_mensagem" class="resultado"></div>
+</div>
+<!-- Quiz fim -->
+   <!--footer inicio-->
+  <div class="footer">
+    <div class="container">
+        L í r i o n <br><br>
+        Um espaço onde a fotografia e a poesia <br>
+        se encontram para revelar o que <br>
+        os sentimentos não dizem em palavras <br><br>
+       
+    
+    <div class="navega">
+        N a v e g a ç ã o<br><br>
+        <a href="index.html">▫︎ ínicio</a> <br>
+        <a href="foto.html">▫︎ Poesias</a><br>
+        <a href="foto.html">▫︎ Fotografias</a><br>
+        <a href="enviar.html">▫︎ Enviar </a><br>
+        <a href="index.html">▫︎ Sobre </a><br>
+        <a href="index.html">▫︎ Contato</a>
+    </div>
+    <div class="descubra">
+        D e s c u b r a <br><br>
+        <a href="index.html">▫︎ Mais recentes</a> <br>
+        <a href="index.html">▫︎ Mais curtidas</a> <br>
+        <a href="index.html">▫︎ Em destaque</a> <br>
+        <a href="index.html">▫︎ Autores </a>
+    </div>
+    <div class="novidades">
+        Receba novidades<br><br>
+         Ative as notificações para sempre<br>
+        receber novas postagens <br><br>
+        <div class="botao_notificacoes">
+            <a href="notificacoes.html"> Notificações</a> </div>
+        </div>
+    </div>
+    <div class="linhaBaixo"> &copy; 2026 Lírion - todos os direitos reservados <span>v1.0.0 Feito com poesia</span> </div>
+  </div>
+  <!--footer fim-->
+
+    <script>
+
+        
+    function mostrarMensagem(){
+        //Lista de todos os anos que estão nas opções
+        var lista_anos = [1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+
+        //Estações que estão nas opções
+        var lista_estacoes = [`Primavera`,`Verão`,`Outono`,`Inverno`];
+        var lista_pontos = [40, 30, 45, 50]; // Pontos de afinidade
+
+        //Lista dos estilos das fotografias
+        var analogica = "Analógica";
+        var pretoEBranco = "Preto e Branco";
+        var macro = "Macro";
+        var retrato = "Retrato";
+        var paisagem = "Paisagem";
+        var cyberpunk = "Cyberpunk";
+        var vintage = "Vintage";
+        var minimalista = "Minimalista";
+        var streetPhotography = "Street Photography";
+        var longaExposicao = "Longa Exposição";
+        var documental = "Documental";
+        var moda = "Moda";
+        var surrealista = "Surrealista";
+        var arquitetura = "Arquitetura";
+        var gastronomica = "Gastronômica";
+        var fineArt = "Fine Art";
+        var subaquatica = "Subaquática";
+        var astrofotografia = "Astrofotografia";
+        var infravermelho = "Infravermelho";
+        var gotica = "Gótica";
+
+        //Todos os caracters especiais para validação
+        var vetor = ['!','@','#','$','%','¨','&','*','(',')','-','+','=','{','}'];
+
+        //Poesias
+        var lista_poesia = [
+        ` Memória<br>
+        <br>
+        Amar o perdido<br>
+        deixa confundido<br>
+        este coração.<br>
+        <br>
+        Nada pode o olvido<br>
+        contra o sem sentido<br>
+        apelo do Não.<br>
+        <br>
+        As coisas tangíveis<br>
+        tornam-se insensíveis<br>
+        à palma da mão<br>
+        <br>
+        Mas as coisas findas<br>
+        muito mais que lindas,<br>
+        essas ficarão.Carlos Drummond de Andrade<br>
+        `,
+        `As sem-razões do amor<br>
+        <br>
+        Eu te amo porque te amo,<br>
+        Não precisas ser amante,<br>
+        e nem sempre sabes sê-lo.<br>
+        Eu te amo porque te amo.<br>
+        Amor é estado de graça<br>
+        e com amor não se paga.<br>
+        <br>
+        Amor é dado de graça,<br>
+        é semeado no vento,<br>
+        na cachoeira, no eclipse.<br>
+        Amor foge a dicionários<br>
+        e a regulamentos vários.<br>
+        <br>
+        Eu te amo porque não amo<br>
+        bastante ou demais a mim.<br>
+        Porque amor não se troca,<br>
+        não se conjuga nem se ama.<br>
+        Porque amor é amor a nada,<br>
+        feliz e forte em si mesmo.<br>
+        <br>
+        Amor é primo da morte,<br>
+        e da morte vencedor,<br>
+        por mais que o matem (e matam)<br>
+        a cada instante de amor.Carlos Drummond de Andrade<br>
+        `,
+        `A Felicidade<br>
+        <br>
+        Tristeza não tem fim<br>
+        Felicidade sim<br>
+        <br>
+        A felicidade é como a pluma<br>
+        Que o vento vai levando pelo ar<br>
+        Voa tão leve<br>
+        Mas tem a vida breve<br>
+        Precisa que haja vento sem parar<br>
+        <br>
+        A felicidade do pobre parece<br>
+        A grande ilusão do carnaval<br>
+        A gente trabalha o ano inteiro<br>
+        Por um momento de sonho<br>
+        Pra fazer a fantasia<br>
+        De rei ou de pirata ou jardineira<br>
+        Pra tudo se acabar na quarta-feira<br>
+        <br>
+        Tristeza não tem fim<br>
+        Felicidade sim<br>
+        <br>
+        Vinicius de Moraes<br>
+        `,
+        `Convite Triste<br>
+        <br>
+        Meu amigo, vamos sofrer,<br>
+        vamos beber, vamos ler jornal,<br>
+        vamos dizer que a vida é ruim,<br>
+        meu amigo, vamos sofrer.<br>
+        <br>
+        Vamos fazer um poema<br>
+        ou qualquer outra besteira.<br>
+        Fitar por exemplo uma estrela<br>
+        por muito tempo, muito tempo<br>
+        e dar um suspiro fundo<br>
+        ou qualquer outra besteira.<br>
+        <br>
+        Vamos beber uísque, vamos<br>
+        beber cerveja preta e barata,<br>
+        beber, gritar e morrer,<br>
+        ou, quem sabe? beber apenas.<br>
+        <br>
+        (Em: Brejo das Almas)<br>
+        Carlos Drummond de Andrade<br>
+        `,
+        `Danço para ti<br>
+        <br>
+        Danço num sonho de ternura<br>
+        Uma música de palavras calmas<br>
+        Dançam vontades e desejos<br>
+        Rodopiam sentimentos da alma.<br>
+        <br>
+        Levanta-se o espírito que envolve<br>
+        todo o meu corpo fervente.<br>
+        Danço e liberto-me do tempo<br>
+        e contigo danço no meu pensamento.<br>
+        <br>
+        Sei que é um sonho, uma quimera<br>
+        Mas não quero despertar<br>
+        A tua imagem fugidia<br>
+        Só assim a consigo agarrar.<br>
+        <br>
+        Amo o teu corpo e danço.<br>
+        Dançarei mesmo quando a musica parar.<br>
+        Danço para ti... vens?<br>
+        JoRut<br>
+        `,
+        `Quintal do peito<br>
+        <br>
+        O amor, nada mais é do que uma criança<br>
+        E o coração é um quintal<br>
+        Desses de avó<br>
+        Que as cercas compridas desaparecem<br>
+        <br>
+        Onde os montes e relvas tocam o céu<br>
+        Escondem fantasias, sonhos<br>
+        Lendas e superstições<br>
+        <br>
+        Mas para os desacreditados<br>
+        Só há terras, matos, tocos<br>
+        Nó máximo cobras e cabas<br>
+        <br>
+        Para as crianças, sempre bobas<br>
+        Há universos, reinos e principados<br>
+        É o baú de tesouros e magias<br>
+        Um mundo a ser explorado<br>
+        <br>
+        Lucas Palavra<br>
+        `,
+        `Saudade<br>
+        <br>
+        Saudade é solidão acompanhada,<br>
+        é quando o amor ainda não foi embora,<br>
+        mas o amado já.<br>
+        <br>
+        Saudade é amar um passado que ainda não passou,<br>
+        é recusar um presente que nos machuca,<br>
+        é não ver o futuro que nos convida.<br>
+        <br>
+        Saudade é sentir que existe o que não existe mais.<br>
+        <br>
+        Só uma pessoa no mundo deseja sentir saudade:<br>
+        aquela que nunca amou.<br>
+        <br>
+        Aguinaldo Silva<br>
+        `,
+        `A Solidão e Sua Porta<br>
+        <br>
+        Quando mais nada resistir que valha<br>
+        a pena de viver e a dor de amar<br>
+        E quando nada mais interessar<br>
+        (nem o torpor do sono que se espalha)<br>
+        <br>
+        Arquitetar na sombra a despedida<br>
+        Deste mundo que te foi contraditório<br>
+        Lembra-te que afinal te resta a vida<br>
+        <br>
+        Com tudo que é insolvente e provisório<br>
+        e de que ainda tens uma saída<br>
+        Entrar no acaso e amar o transitório.<br>
+        <br>
+        Carlos Pena Filho<br>
+        `,
+        `Como dizia o poeta<br>
+        <br>
+        Quem já passou<br>
+        Por esta vida e não viveu<br>
+        Pode ser mais, mas sabe menos do que eu<br>
+        Porque a vida só se dá<br>
+        Pra quem se deu<br>
+        Pra quem amou, pra quem chorou<br>
+        Pra quem sofreu<br>
+        <br>
+        Não há mal pior<br>
+        Do que a descrença<br>
+        Mesmo o amor que não compensa<br>
+        É melhor que a solidão<br>
+        <br>
+        Vinícius de Moraes e Toquinho<br>
+        `,
+        `NÃO SOU POETA<br>
+        <br>
+        Quem me dera se eu fosse poeta<br>
+        E dos amores saber contar<br>
+        Falaria dum amor verdadeiro<br>
+        Porque da verdade o amor não sabe calar.<br>
+        <br>
+        Mas infelizmente não sou poeta<br>
+        E do amor não sei falar<br>
+        Se soubesse viveria em teus dias<br>
+        E nunca mais sairia de lá.<br>
+        <br>
+        Gil Buena<br>
+        `,
+        `Ser poeta<br>
+        <br>
+        Dizem que o poeta é pouco de tudo<br>
+        E todas as qualidades lhe recaem,<br>
+        É boêmio, alcoólatra, pervertido e senhor das palavras<br>
+        <br>
+        Ser poeta é ser vivo para o mundo da razão e da imaginação,<br>
+        Não ser o senhor do sim e do não,<br>
+        mas de um talvez com uma certa dose de dúvida.<br>
+        <br>
+        No final de tudo<br>
+        Ser poeta<br>
+        É ser um pouco de tudo e não ser nada.<br>
+        <br>
+        Moises Bottas<br>
+        `,
+        `Ser poeta<br>
+        <br>
+        Ser poeta é escrever sem tinta<br>
+        Ler sem nada escrito<br>
+        Falar sem abrir a boca<br>
+        Compreender os silêncios<br>
+        <br>
+        É viajar na loucura<br>
+        Andar na ignorância<br>
+        Viver na sabedoria<br>
+        Sendo amigo de tolos<br>
+        <br>
+        É roubar a dor alheia<br>
+        É espalhar alegria<br>
+        É compartilhar a vida<br>
+        <br>
+        Julio Cupes<br>
+        `,
+        `PARA SER POETA<br>
+        <br>
+        Para ser poeta<br>
+        para ser bom<br>
+        ao que se presta<br>
+        tem que ter conteúdo<br>
+        em todos os sentidos.<br>
+        <br>
+        Misture tudo isso<br>
+        conhecimento e vida<br>
+        e tudo mais que<br>
+        pela cabeça passe<br>
+        faça da mente um turbilhão.<br>
+        <br>
+        E no final<br>
+        depois de tudo<br>
+        já escrito<br>
+        o poeta é escrito,<br>
+        não é mais o escritor.<br>
+        <br>
+        Dante Vitoriano Locateli<br>
+        `,
+        `Ser Poeta<br>
+        <br>
+        É ser tudo sem nunca ter sido<br>
+        É amar sem nunca ter amado<br>
+        É viajar sem nunca ter viajado<br>
+        É abraçar sem nunca ter abraçado<br>
+        <br>
+        É morrer sem nunca ter morrido<br>
+        É ter tudo sem nunca ter tido<br>
+        <br>
+        Anilya Atsoc<br>
+        `,
+        `Amor<br>
+        <br>
+        Amor é fogo que arde sem se ver,<br>
+        É ferida que dói e não se sente;<br>
+        É um contentamento descontente,<br>
+        É dor que desatina sem doer.<br>
+        <br>
+        É um não querer mais que bem querer;<br>
+        É solitário andar por entre a gente;<br>
+        É nunca contentar-se de contente;<br>
+        É cuidar que se ganha em se perder.<br>
+        <br>
+        Luís de Camões<br>
+        `,
+            ];
+        
+        // Colocando valor nos inputs
+        var primeiro_nome = ipt_primeiro_nome.value;
+        var ano_nascimento = Number(sel_ano_nascimento.value);
+        var estacao_do_ano = sel_estacao_do_ano.value;
+        var fotografia = sel_fotografia.value;
+        div_mensagem.innerHTML = '';
+        
+        // Validação de caracteres especiais no nome
+        var temEspecial = false;
+
+        for (var i = 0; i < vetor.length; i++) {
+            if (primeiro_nome == vetor[i]) {
+                temEspecial = true;
+            }
+        }
+
+        //Validações
+        if(temEspecial == true){
+            div_mensagem.innerHTML = `<span style="color: brown;">Digite um nome válido</span>`;
+        } else if (primeiro_nome == '' || ano_nascimento == 'opcao' || estacao_do_ano == 'opcao' || fotografia == 'opcao'){
+            div_mensagem.innerHTML = `<span style="color: brown;">Preencha todos os campos corretamente</span>`;
+        } else {
+        
+        // Saber quantos anos o usuario tem
+        var ano_atual = 2026;
+        var idade = ano_atual - ano_nascimento;
+
+        // Pontuações de afinidade
+        // Primavera = 40  Romance
+        // Verão     = 30  Alegre/Agitado
+        // Outono    = 45  Calmo/Sereno
+        // Inverno   = 50  Melancólico/Frio
+
+        // Escolhendo a pontuação da estação usando if e else
+        var peso_escolhido = 0;
+
+        if (estacao_do_ano == "Primavera") {
+            peso_escolhido = 40;
+        } else if (estacao_do_ano == "Verão") {
+            peso_escolhido = 30;
+        } else if (estacao_do_ano == "Outono") {
+            peso_escolhido = 45;
+        } else if (estacao_do_ano == "Inverno") {
+            peso_escolhido = 50;
+        }
+
+        // Fazemos a conta da fração
+        var valor_multiplicado = idade * peso_escolhido;
+        var divisor_da_fracao = 10;
+        var resultado_da_divisao = valor_multiplicado / divisor_da_fracao;
+    
+        // Calculando a raiz quadrada manualmente (método de Newton)
+        var numero_para_raiz = resultado_da_divisao;
+ 
+        // Inicializa o palpite
+        var palpite = numero_para_raiz / 2;  
+
+        // Aplica as aproximações consecutivas na mesma variável
+        palpite = (palpite + (numero_para_raiz / palpite)) / 2; // 1º ajuste
+        palpite = (palpite + (numero_para_raiz / palpite)) / 2; // 2º ajuste
+        palpite = (palpite + (numero_para_raiz / palpite)) / 2; // 3º ajuste
+        palpite = (palpite + (numero_para_raiz / palpite)) / 2; // 4º ajuste
+
+        var indice_poetico_final = palpite;
+
+        // Poesia aleatória
+        var poesia_aleatoria = Math.random() * lista_poesia.length;
+        var contador = 0;
+        
+        // Enquanto o número for maior que 1, retira 1 e soma ao contador
+        // Assim transforma o número quebrado em inteiro para usar como índice
+        while (poesia_aleatoria >= 1) {
+            poesia_aleatoria = poesia_aleatoria - 1;
+            contador = contador + 1;
+        }
+        var poesia_aleatoria_certo = lista_poesia[contador];
+        
+        // Mensagem de boas vindas de acordo com o ano de nascimento
+        if(ano_nascimento <= 1940){
+           div_mensagem.innerHTML += `<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1945){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1950){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1955){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1960){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1965){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br>Reservamos um momento para que a arte respire através da sua leitura.
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1970){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1975){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1980){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1985){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1990){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 1995){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 2000){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular.
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 2005){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 2010){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura.
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 2015){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else if (ano_nascimento <= 2020){
+           div_mensagem.innerHTML +=`<br>Olá ${(primeiro_nome)}, seja bem-vindo(a) a este refúgio particular. 
+           <br>Reservamos um momento para que a arte respire através da sua leitura. 
+           <br>Deixe que a sutileza de cada verso guie seu fôlego e que as palavras 
+           <br>revelem significados novos para o seu agora:<br><br>Sua poesia é:<br><br><span>${(poesia_aleatoria_certo)}</span><br><br>`;
+        }else{}
+        
+
+        // ESTAÇÕES — texto poético de cada uma
+
+
+        if(estacao_do_ano == 'Primavera'){
+            div_mensagem.innerHTML += `<br>${(estacao_do_ano)}<br><br>
+            O Desabrochar é uma Invasão<br><br>
+            A primavera não é um convite, é uma urgência que rompe a casca.
+            <br>É quando o que estava guardado dentro do solo escuro decide 
+            <br>que a luz, por mais que queime, é o único caminho. <br>
+            <br>Existe uma dor nesse crescimento, uma espécie de violência mansa no abrir das pétalas.
+            <br>As pessoas pensam que florescer é um evento estético, mas é um evento de sobrevivência.
+            <br>É o momento em que a vida cansa de ser semente e aceita o risco de ser cor. 
+            <br>E ser cor é estar exposto. É abrir o peito para o vento e para a chuva sem ter onde se esconder.<br>
+            <br>Olhe para as flores: elas não estão sorrindo, elas estão existindo com uma força absoluta.
+            <br>Estão ali, imóveis, sendo tudo o que podem ser antes que o tempo as leve. Primavera é isso: 
+            <br>a coragem de ser vulnerável diante do mundo, sabendo que a beleza é apenas o intervalo entre dois invernos.
+            <br><br>Clarice Lispector<br><br>`;
+
+        }else if(estacao_do_ano == 'Verão'){
+            div_mensagem.innerHTML += `<br>${(estacao_do_ano)}<br><br>
+            O Verão e o Excesso<br><br>
+            O verão não pede licença para entrar.
+            <br>Ele chega com tudo, com o sol empurrado até o limite do suportável,
+            <br>com o cheiro de terra quente e o barulho das cigarras que não param.<br>
+            <br>O verão é o tempo do excesso: excesso de luz, excesso de calor,
+            <br>excesso de vida acontecendo de uma vez só.
+            <br>É a estação que não sabe ser discreta.<br>
+            <br>E há algo de honesto nisso. O verão não esconde nada.
+            <br>O que existe, existe com força. O que arde, arde de verdade.
+            <br>O que cresce, cresce sem pedir desculpa por ocupar espaço.<br>
+            <br>Verão é a estação dos que vivem sem medo de transbordar.
+            <br>Dos que sabem que o calor passa, mas a memória do que foi vivido
+            <br>permanece, guardada na pele como lembrança de um sol que um dia
+            <br>decidiu ficar um pouco mais.<br><br>`;
+
+        }else if(estacao_do_ano == 'Outono'){
+            div_mensagem.innerHTML += `<br>${(estacao_do_ano)}<br><br>
+            A Beleza de Soltar<br><br>
+            O outono é a única estação que aprendeu a arte de soltar.
+            <br>Enquanto as outras estações acumulam, florescem, queimam,
+            <br>o outono despe. Com cuidado. Com cor.<br>
+            <br>Existe uma generosidade estranha nas árvores em outubro.
+            <br>Elas entregam tudo o que têm, folha por folha,
+            <br>e ficam nuas sem vergonha.<br>
+            <br>Como se soubessem que perder não é o fim,
+            <br>mas a preparação para recomeçar.<br>
+            <br>O outono nos ensina que algumas coisas precisam cair
+            <br>para que a raiz respire.
+            <br>Que o vazio que fica depois da queda
+            <br>não é ausência, é espaço.<br>
+            <br>Espaço para o que ainda não chegou.<br><br>`;
+
+        }else if(estacao_do_ano == 'Inverno'){
+            div_mensagem.innerHTML += `<br>${(estacao_do_ano)}<br><br>
+            O Silêncio que Preserva<br><br>
+            O inverno é o único tempo em que o mundo consente em ser silencioso.
+            <br>Não o silêncio vazio, aquele que pesa e sufoca,
+            <br>mas o silêncio cheio, o que guarda.<br>
+            <br>Debaixo do frio, a terra não morreu. Ela apenas fechou os olhos.
+            <br>As sementes esperam. As raízes continuam seu trabalho invisível.
+            <br>O que parece parado está, na verdade, se preparando.<br>
+            <br>Há uma sabedoria no inverno que nenhuma outra estação possui:
+            <br>a sabedoria de saber que nem tudo que some, foi embora.
+            <br>Que o escuro não é ausência de luz, é apenas luz adormecida.<br>
+            <br>Inverno é para os que aprenderam a confiar no que não se vê.
+            <br>Para os que sabem esperar sem ansiedade,
+            <br>porque sabem que a primavera
+            <br>sempre foi parte do plano.<br><br>`;
+        }
+
+
+        
+        // FOTOGRAFIAS — história poética de cada estilo
+
+        if (fotografia == analogica) {
+            div_mensagem.innerHTML += `<br>${analogica}<br><br>
+            A Fotografia Analógica e o Peso do Instante<br><br>
+            Antes de tudo existir em nuvens e pixels, havia o grão.
+            <br>Pequenos cristais de prata espalhados sobre um filme,
+            <br>esperando pela luz como quem espera por uma confissão.<br>
+            <br>A fotografia analógica não perdoa a pressa.
+            <br>Cada clique tem um custo. Cada quadro é uma decisão.
+            <br>Não existe desfazer, não existe ver na hora.
+            <br>Existe apenas o ato de confiar que aquele momento
+            <br>mereceu ser eternizado antes de você ter a certeza disso.<br>
+            <br>E talvez seja esse o seu segredo mais profundo:
+            <br>a fotografia analógica ensina que a beleza
+            <br>não precisa ser imediatamente comprovada.
+            <br>Às vezes ela só aparece depois,
+            <br>quando o filme é revelado no escuro
+            <br>e o que era invisível finalmente mostra sua face.<br><br>`;
+
+        } else if (fotografia == pretoEBranco) {
+            div_mensagem.innerHTML += `<br>${pretoEBranco}<br><br>
+            O Mundo Sem Cor é Mais Honesto<br><br>
+            Retirar a cor de uma fotografia não é empobrecê-la.
+            <br>É despir o mundo até que reste apenas o essencial:
+            <br>a luz, a sombra, e o que existe entre elas.<br>
+            <br>O preto e branco não mente com a distração do vermelho ou do azul.
+            <br>Ele força o olhar a ir direto ao rosto, à textura, ao gesto.
+            <br>É a linguagem dos que sabem que o mais importante
+            <br>nunca está na superfície colorida das coisas.<br>
+            <br>Toda grande emoção humana existe em preto e branco:
+            <br>o luto, a saudade, a ternura, o cansaço.
+            <br>As cores são o que o mundo mostra.
+            <br>O preto e branco é o que o mundo sente.<br><br>`;
+
+        } else if (fotografia == macro) {
+            div_mensagem.innerHTML += `<br>${macro}<br><br>
+            O Universo que Existe no Pequeno<br><br>
+            A fotografia macro é um ato de humildade.
+            <br>É abaixar o joelho diante de uma gota d'água
+            <br>e reconhecer que há um mundo inteiro ali dentro
+            <br>que nunca pediu para ser visto, mas existe com perfeição absoluta.<br>
+            <br>A asa de um inseto carrega mais arquitetura
+            <br>do que qualquer arranha-céu.
+            <br>O centro de uma flor guarda mais geometria
+            <br>do que qualquer obra humana.<br>
+            <br>Quem fotografa em macro aprendeu o que a maioria esqueceu:
+            <br>que o extraordinário não está no grande.
+            <br>Está no pequeno que ninguém parou para olhar.<br><br>`;
+
+        } else if (fotografia == retrato) {
+            div_mensagem.innerHTML += `<br>${retrato}<br><br>
+            Fotografar um Rosto é Fotografar uma História<br><br>
+            Nenhuma câmera jamais fotografou um rosto.
+            <br>O que ela captura são os rastros do tempo,
+            <br>as marcas das escolhas, o peso do que foi vivido
+            <br>e guardado debaixo da pele sem lugar para ir.<br>
+            <br>Um retrato verdadeiro não é feito com a lente.
+            <br>É feito com a confiança que existe entre quem fotografa
+            <br>e quem decide, por um instante, abaixar a guarda.<br>
+            <br>Os melhores retratos da história não mostram beleza.
+            <br>Mostram verdade.
+            <br>E a verdade humana, quando capturada no exato segundo em que aparece,
+            <br>é a coisa mais bela que existe.<br><br>`;
+
+        } else if (fotografia == paisagem) {
+            div_mensagem.innerHTML += `<br>${paisagem}<br><br>
+            A Terra Conta Histórias Que Nenhuma Boca Sabe Dizer<br><br>
+            Uma paisagem nunca é apenas o que você vê.
+            <br>É também o que você sente ao ver.
+            <br>A montanha que parece sólida e eterna
+            <br>guarda em si milhões de anos de transformação silenciosa.<br>
+            <br>Fotografar paisagens é tentar capturar algo que resiste à captura:
+            <br>a sensação de ser pequeno diante do infinito
+            <br>e descobrir que isso não é uma ameaça, é um alívio.<br>
+            <br>Porque quando o mundo é grande demais para carregar,
+            <br>é bom saber que ele existia antes de você
+            <br>e continuará depois.
+            <br>E que você, por um instante, fez parte disso.<br><br>`;
+
+        } else if (fotografia == cyberpunk) {
+            div_mensagem.innerHTML += `<br>${cyberpunk}<br><br>
+            Neon e Sombra: A Beleza do Futuro Imperfeito<br><br>
+            A fotografia cyberpunk não é sobre o futuro.
+            <br>É sobre o presente visto sem ilusão.<br>
+            <br>É a cidade de madrugada, quando as luzes neon
+            <br>se misturam com a chuva no asfalto
+            <br>e criam uma beleza que nenhum arquiteto planejou.<br>
+            <br>O cyberpunk fotografa o que acontece nas bordas:
+            <br>onde a tecnologia encontra a pobreza,
+            <br>onde o brilho encontra a sombra,
+            <br>onde o progresso deixou alguém para trás.<br>
+            <br>Há uma honestidade brutal nessa estética.
+            <br>Ela diz: o futuro chegou, mas não chegou para todos.
+            <br>E essa contradição, fotografada com beleza,
+            <br>é mais poderosa do que qualquer discurso.<br><br>`;
+
+        } else if (fotografia == vintage) {
+            div_mensagem.innerHTML += `<br>${vintage}<br><br>
+            O Passado Como Linguagem<br><br>
+            Há algo nas fotografias antigas que as novas não conseguem imitar:
+            <br>a presença do tempo na própria imagem.<br>
+            <br>O amarelado, o grão, as bordas desbotadas não são defeitos.
+            <br>São o tempo deixando sua assinatura na memória.
+            <br>São a prova de que aquilo existiu, foi real, foi vivido.<br>
+            <br>A fotografia vintage nos lembra que toda época
+            <br>que parece comum enquanto é vivida
+            <br>se torna preciosa quando passa.<br>
+            <br>E que talvez o presente que fotografamos hoje,
+            <br>com toda a sua imperfeição e pressa,
+            <br>seja exatamente o que alguém vai olhar com saudade
+            <br>daqui a cinquenta anos.<br><br>`;
+
+        } else if (fotografia == minimalista) {
+            div_mensagem.innerHTML += `<br>${minimalista}<br><br>
+            O Silêncio Visual<br><br>
+            A fotografia minimalista é uma lição de coragem.
+            <br>Porque retirar é mais difícil do que acrescentar.<br>
+            <br>É preciso confiar que o suficiente é suficiente.
+            <br>Que um único elemento no centro de muito espaço vazio
+            <br>pode dizer mais do que uma imagem repleta de informações.<br>
+            <br>O minimalismo fotográfico é a arte de saber o que guardar
+            <br>e o que deixar de fora do quadro.
+            <br>É entender que o vazio não é ausência.
+            <br>É presença do espaço que permite que o essencial respire.<br><br>`;
+
+        } else if (fotografia == streetPhotography) {
+            div_mensagem.innerHTML += `<br>${streetPhotography}<br><br>
+            A Rua Como Palco, a Vida Como Obra<br><br>
+            A fotografia de rua é o único estilo que não pode ser ensaiado.
+            <br>Ela acontece ou não acontece.
+            <br>O fotógrafo não cria a cena. Ele apenas está lá quando ela surge.<br>
+            <br>É a velha senhora que ri sozinha no banco da praça.
+            <br>É a criança que olha para a câmera sem medo.
+            <br>É o homem de terno que para diante da vitrine
+            <br>e fica olhando para algo que só ele sabe o que é.<br>
+            <br>A rua fotografada com atenção revela que
+            <br>a vida extraordinária não acontece em lugares especiais.
+            <br>Ela acontece aqui, agora, entre pessoas comuns
+            <br>que nem sabem que estão sendo poesia.<br><br>`;
+
+        } else if (fotografia == longaExposicao) {
+            div_mensagem.innerHTML += `<br>${longaExposicao}<br><br>
+            O Tempo Visível<br><br>
+            A longa exposição faz o que nenhum outro estilo consegue:
+            <br>torna o tempo visível.<br>
+            <br>O carro que passou vira um rastro de luz.
+            <br>O rio que corria vira névoa.
+            <br>As estrelas que giraram viram arcos no céu.<br>
+            <br>A câmera guarda aberta, paciente, acumulando luz
+            <br>da mesma forma que a memória acumula experiência.<br>
+            <br>Cada fotografia de longa exposição é uma metáfora:
+            <br>o que parece instante é sempre, na verdade,
+            <br>um conjunto de momentos que se sobrepõem
+            <br>para criar algo que nenhum deles sozinho poderia ser.<br><br>`;
+
+        } else if (fotografia == documental) {
+            div_mensagem.innerHTML += `<br>${documental}<br><br>
+            A Responsabilidade de Mostrar o Que É Real<br><br>
+            A fotografia documental carrega um peso que os outros estilos não têm:
+            <br>a obrigação com a verdade.<br>
+            <br>Ela não embeleza. Não filtra. Não escolhe o ângulo mais favorável.
+            <br>Ela registra o que existe, especialmente o que as pessoas
+            <br>preferem não ver.<br>
+            <br>E há uma coragem enorme nisso.
+            <br>Em apontar a câmera para a pobreza, para a injustiça,
+            <br>para o sofrimento, para a alegria simples dos que têm pouco,
+            <br>e dizer: isto existe. Isto merece ser visto.<br>
+            <br>A fotografia documental não é arte pelo prazer da arte.
+            <br>É arte pelo compromisso com o mundo.<br><br>`;
+
+        } else if (fotografia == moda) {
+            div_mensagem.innerHTML += `<br>${moda}<br><strong></strong><br>
+            A Roupa Como Poema<br><br>
+            A fotografia de moda é frequentemente mal compreendida.
+            <br>Acham que é vaidade. Acham que é superficial.<br>
+            <br>Mas a roupa nunca foi apenas roupa.
+            <br>É identidade, é pertencimento, é armadura.
+            <br>É a primeira linguagem que usamos antes de abrir a boca.<br>
+            <br>A fotografia de moda, quando feita com intenção,
+            <br>conta histórias sobre quem somos,
+            <br>sobre o tempo em que vivemos,
+            <br>sobre o que desejamos parecer e o que tentamos esconder.<br>
+            <br>É um espelho que às vezes mente
+            <br>e às vezes diz a verdade mais nua que existe.<br><br>`;
+
+        } else if (fotografia == surrealista) {
+            div_mensagem.innerHTML += `<br>${surrealista}<br><br>
+            O Sonho Tem Mais Lógica do Que Parece<br><br>
+            A fotografia surrealista parte de uma premissa simples:
+            <br>a realidade como ela é não diz tudo o que precisa ser dito.<br>
+            <br>É por isso que os peixes voam.
+            <br>É por isso que os relógios derretem.
+            <br>É por isso que portas se abrem para o céu
+            <br>e figuras humanas existem à metade.<br>
+            <br>O surrealismo fotográfico não nega a realidade.
+            <br>Ele a expande.
+            <br>Ele diz: existe mais do que o olho consegue ver.
+            <br>Existe o que a mente sente quando ninguém está olhando.<br>
+            <br>E esse invisível, quando fotografado com cuidado,
+            <br>é mais verdadeiro do que qualquer coisa que a câmera já captou.<br><br>`;
+
+        } else if (fotografia == arquitetura) {
+            div_mensagem.innerHTML += `<br>${arquitetura}<br><br>
+            Todo Edifício é uma Filosofia de Pedra<br><br>
+            Construir é o ato humano mais próximo de uma declaração.
+            <br>Cada edifício diz algo sobre o povo que o fez,
+            <br>sobre o que ele valoriza, sobre como imagina o sagrado e o cotidiano.<br>
+            <br>A fotografia de arquitetura não é apenas registrar paredes.
+            <br>É entender como a luz entra por uma janela específica
+            <br>em um horário específico e transforma o concreto em poesia.<br>
+            <br>É perceber que as sombras que um edifício projeta
+            <br>às vezes dizem mais sobre ele
+            <br>do que toda a fachada iluminada.<br><br>`;
+
+        } else if (fotografia == gastronomica) {
+            div_mensagem.innerHTML += `<br>${gastronomica}<br><br>
+            Comer é um Ato de Amor<br><br>
+            A fotografia gastronômica existe porque comida nunca foi apenas combustível.
+            <br>Foi sempre afeto. Foi sempre memória.<br>
+            <br>O cheiro do pão de avó.
+            <br>O sabor do doce que só existia na infância.
+            <br>A mesa farta que significava segurança.<br>
+            <br>Fotografar comida com cuidado é reconhecer
+            <br>que aquele prato carrega uma história,
+            <br>que quem o preparou colocou algo de si ali,
+            <br>e que comer é, em muitos sentidos,
+            <br>receber o cuidado de alguém dentro do próprio corpo.<br><br>`;
+
+        } else if (fotografia == fineArt) {
+            div_mensagem.innerHTML += `<br>${fineArt}<br><br>
+            Quando a Câmera Vira Pincel<br><br>
+            A fotografia fine art recusa a ideia de que a câmera registra.
+            <br>Ela insiste que a câmera cria.<br>
+            <br>Cada imagem é uma visão, uma interpretação,
+            <br>um pedaço do interior do fotógrafo
+            <br>que encontrou forma no mundo exterior.<br>
+            <br>O fine art não tem compromisso com o como as coisas são.
+            <br>Tem compromisso com o como as coisas deveriam ser vistas.
+            <br>Com o que existe além da superfície,
+            <br>além do óbvio, além do que qualquer um já viu.<br>
+            <br>É fotografia como confissão.<br><br>`;
+
+        } else if (fotografia == subaquatica) {
+            div_mensagem.innerHTML += `<br>${subaquatica}<br><br>
+            O Mundo Embaixo do Silêncio<br><br>
+            Existe um mundo completo vivendo embaixo da superfície
+            <br>que nunca soube que precisava ser descoberto.<br>
+            <br>A fotografia subaquática é o convite para essa descoberta.
+            <br>É mergulhar no único lugar onde o som se comporta diferente,
+            <br>onde a luz dobra antes de chegar nos objetos,
+            <br>onde os seres não se movem como nada que existe em terra.<br>
+            <br>Embaixo d'água, tudo flutua.
+            <br>E há algo profundamente libertador nessa leveza.
+            <br>Como se o peso que carregamos na superfície
+            <br>simplesmente não tivesse acesso a esse lugar.<br><br>`;
+
+        } else if (fotografia == astrofotografia) {
+            div_mensagem.innerHTML += `<br>${astrofotografia}<br><br>
+            A Luz que Viajou Milhões de Anos Para Chegar Até Você<br><br>
+            Cada estrela que aparece em uma fotografia astronômica
+            <br>é uma mensagem do passado.<br>
+            <br>A luz que entra pela lente saiu daquela estrela
+            <br>há milhares, às vezes milhões de anos.
+            <br>Antes de cidades. Antes de humanos. Antes de tudo.<br>
+            <br>E ela viajou todo esse tempo
+            <br>para chegar exatamente naquela câmera,
+            <br>naquela noite,
+            <br>naquele momento em que você decidiu olhar para cima.<br>
+            <br>A astrofotografia é o único estilo que nos lembra
+            <br>que somos muito pequenos e, ao mesmo tempo,
+            <br>que somos a única parte do universo
+            <br>que decidiu parar para fotografá-lo.<br><br>`;
+
+        } else if (fotografia == infravermelho) {
+            div_mensagem.innerHTML += `<br>${infravermelho}<br><br>
+            Ver o Que o Olho Nunca Viu<br><br>
+            A fotografia infravermelha captura uma luz
+            <br>que existe ao redor de nós o tempo todo
+            <br>e que nossos olhos nunca foram feitos para ver.<br>
+            <br>E o resultado é um mundo que reconhecemos mas não reconhecemos.
+            <br>As folhas viram brancas como neve.
+            <br>O céu vira negro em pleno dia.
+            <br>O que era comum se torna estranho e belo.<br>
+            <br>A fotografia infravermelha nos lembra
+            <br>que o mundo é maior do que nossa percepção dele.
+            <br>Que existe realidade onde achávamos que não havia nada.
+            <br>Que a câmera certa, nos filtros certos,
+            <br>pode mostrar o invisível.<br><br>`;
+
+        } else if (fotografia == gotica) {
+            div_mensagem.innerHTML += `<br>${gotica}<br><br>
+            A Beleza que Mora na Sombra<br><br>
+            A fotografia gótica entende o que a maioria rejeita:
+            <br>que a escuridão não é o oposto da beleza.
+            <br>É onde a beleza mais profunda vive.<br>
+            <br>Os cemitérios cheios de história.
+            <br>As igrejas antigas com suas vitrines que filtram a luz em cores de luto.
+            <br>As rosas que secaram mas ainda guardam a forma de quando eram vivas.<br>
+            <br>A fotografia gótica não celebra a morte.
+            <br>Ela celebra a permanência.
+            <br>A ideia de que o que foi amado não desaparece,
+            <br>apenas muda de forma.
+            <br>Que há dignidade no que envelhece,
+            <br>no que se desfaz,
+            <br>no que o tempo tocou e deixou marcado para sempre.<br><br>`;
+        }
+
+        //  índice poético calculado no final, com explicação completa
+        div_mensagem.innerHTML += `
+        <br>
+        ✦ Seu índice poético é: ${indice_poetico_final.toFixed(2)}
+        <br><br>
+
+        O que é o índice poético?
+        <br><br>
+
+        É um número calculado a partir de duas informações que você forneceu: 
+        <br>a sua idade e a estação do ano favorita. 
+        <br>Ele não mede nada científico de verdade — é um recurso poético do simulador, 
+        <br>uma forma de gerar um número personalizado que diz algo sobre 
+        <br>a sua relação com a poesia.
+        <br><br>
+
+        Como ele foi calculado?
+        <br><br>
+
+        Primeiro, o simulador descobriu a sua idade subtraindo o seu ano de nascimento do ano atual (2026).
+        <br><br>
+
+        Depois, cada estação tem um peso de afinidade:
+        <br>Primavera = 40;<br><br> Verão = 30; <br><br>Outono = 45;<br><br> Inverno = 50;
+        <br><br>
+
+        Esses pesos refletem a vibe de cada estação. 
+        <br>O Inverno tem o maior peso porque é a estação mais introspectiva e melancólica, 
+        <br>qualidades que combinam com a poesia. 
+        <br>O Outono vem logo atrás pelo mesmo motivo. 
+        <br>Primavera e Verão têm pesos menores porque são estações mais extrovertidas e agitadas.
+        <br><br>
+
+        O simulador então multiplicou a sua idade pelo peso da estação escolhida 
+        <br>e dividiu por 10, gerando um número base.
+        <br><br>
+
+        A parte mais especial do cálculo: a raiz quadrada 
+        <br><br>
+
+
+        A lógica é simples: começamos com um palpite (metade do número), 
+        <br>e fomos refinando esse palpite repetindo sempre a mesma fórmula:
+        <br><br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp; novo palpite = ( palpite atual + número ÷ palpite atual ) ÷ 2
+        <br><br>
+
+        Cada vez que repetimos isso, o resultado fica mais próximo da raiz quadrada real. 
+        <br>O cálculo foi repetido 4 vezes, o que já garante uma precisão muito boa.
+        <br><br>
+
+        <strong>Um exemplo para entender</strong>
+        <br><br>
+
+        Imagine um usuário que nasceu em 2000 — ele tem 26 anos — e escolheu Inverno (peso 50):
+        <br><br>
+        26 × 50 = 1300
+        <br>
+        1300 ÷ 10 = 130
+        <br>
+        Raiz quadrada de 130 ≈ 11.40
+        <br><br>
+
+        O índice poético desse usuário seria 11.40.
+        <br><br>
+
+        Um usuário mais velho que escolheu Inverno teria um índice maior. 
+        <br>Um usuário jovem que escolheu Verão teria um índice menor. 
+        <br>Isso cria a sensação de que o número é único para cada pessoa — 
+        <br>porque de fato é.
+        <br><br>
+
+        <strong>Por que isso funciona como recurso poético?</strong>
+        <br><br>
+
+        O índice não precisa significar algo concreto para funcionar. 
+        <br>O número em si não importa tanto quanto a sensação de que ele foi calculado 
+        <br>especialmente para você, levando em conta quem você é.
+        <br><br>
+
+        No contexto do Lírion, um site de fotografia poética, 
+        <br>receber um índice poético no final do simulador é uma experiência 
+        <br>que combina completamente com a identidade do projeto.
+        <br><br>
+
+        Guarde o seu número. Ele é só seu. ✦
+        <br><br>
+        `;
+
+    }
+    }
+
+
+function pegarIdUsuario() {
+
+    var id = sessionStorage.ID_USUARIO;
+
+    if (
+        id == undefined ||
+        id == null ||
+        id == "" ||
+        id == "undefined" ||
+        id == "null"
+    ) {
+
+        if (
+            sessionStorage.USUARIO != undefined &&
+            sessionStorage.USUARIO != null &&
+            sessionStorage.USUARIO != "" &&
+            sessionStorage.USUARIO != "undefined"
+        ) {
+
+            var usuario = JSON.parse(sessionStorage.USUARIO);
+
+            if (usuario.id != undefined) {
+                id = usuario.id;
+            }
+
+            if (usuario.idUsuario != undefined) {
+                id = usuario.idUsuario;
+            }
+
+            if (usuario.idusuario != undefined) {
+                id = usuario.idusuario;
+            }
+        }
+    }
+
+    return id;
+}
+
+
+function carregarPublicacoes() {
+
+    var grid = document.getElementById("grid-publicacoes");
+
+    grid.innerHTML = "";
+
+    fetch("/obras/listar")
+        .then(function (resposta) {
+            return resposta.json();
+        })
+        .then(function (publicacoes) {
+
+            if (publicacoes.length == 0) {
+                grid.innerHTML = "<p>Nenhuma publicação encontrada.</p>";
+            }
+
+            for (var i = 0; i < publicacoes.length; i++) {
+
+                grid.innerHTML += `
+                    <div class="card-publicacao">
+
+                        <div class="card-topo">
+                            <span class="categoria-card">
+                                ${publicacoes[i].nome_categoria}
+                            </span>
+
+                            <span class="autor-card">
+                                por ${publicacoes[i].nome_usuario}
+                            </span>
+                        </div>
+
+                        <h3>
+                            ${publicacoes[i].titulo_da_obra}
+                        </h3>
+
+                        <p>
+                            ${publicacoes[i].descricao_foto_poesia}
+                        </p>
+
+                        <div class="acoes-card">
+                            <button onclick="curtir(${publicacoes[i].idfotografia})">
+                                Curtir (${publicacoes[i].total_likes})
+                            </button>
+
+                            <button onclick="abrirComentario(${publicacoes[i].idfotografia})">
+                                Comentar (${publicacoes[i].total_comentarios})
+                            </button>
+                        </div>
+
+                        <div id="comentario-${publicacoes[i].idfotografia}" class="area-comentario">
+                        </div>
+
+                    </div>
+                `;
+
+            }
+
+        })
+        .catch(function (erro) {
+
+            console.log(erro);
+
+            grid.innerHTML =
+                "<p>Erro ao carregar publicações.</p>";
+
+        });
+
+}
+
+
+function curtir(idFotografia) {
+
+    var idUsuario = pegarIdUsuario();
+
+    if (
+        idUsuario == undefined ||
+        idUsuario == "" ||
+        idUsuario == "undefined"
+    ) {
+
+        alert("Faça login para curtir");
+
+    } else {
+
+        fetch("/obras/curtir/" + idFotografia, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuario: idUsuario
+            })
+        })
+            .then(function (resposta) {
+
+                if (resposta.ok) {
+
+                    carregarPublicacoes();
+
+                } else {
+
+                    alert("Você já curtiu ou deu erro");
+
+                }
+
+            })
+            .catch(function (erro) {
+
+                console.log(erro);
+                alert("Erro ao curtir");
+
+            });
+
+    }
+
+}
+
+
+function abrirComentario(idFotografia) {
+
+    var div = document.getElementById("comentario-" + idFotografia);
+
+    div.innerHTML = `
+        <textarea id="texto-comentario-${idFotografia}" placeholder="Digite seu comentario"></textarea>
+
+        <button onclick="comentar(${idFotografia})">
+            Enviar comentario
+        </button>
+
+        <div id="lista-comentarios-${idFotografia}">
+        </div>
+    `;
+
+    carregarComentarios(idFotografia);
+
+}
+
+
+function comentar(idFotografia) {
+
+    var idUsuario = pegarIdUsuario();
+
+    var texto =
+        document
+            .getElementById("texto-comentario-" + idFotografia)
+            .value;
+
+    if (
+        idUsuario == undefined ||
+        idUsuario == "" ||
+        idUsuario == "undefined"
+    ) {
+
+        alert("Faça login para comentar");
+
+    } else if (texto == "") {
+
+        alert("Digite um comentario");
+
+    } else {
+
+        fetch("/obras/comentar/" + idFotografia, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuario: idUsuario,
+                comentario: texto
+            })
+        })
+            .then(function (resposta) {
+
+                if (resposta.ok) {
+
+                    document
+                        .getElementById("texto-comentario-" + idFotografia)
+                        .value = "";
+
+                    carregarComentarios(idFotografia);
+                    carregarPublicacoes();
+
+                } else {
+
+                    alert("Erro ao comentar");
+
+                }
+
+            })
+            .catch(function (erro) {
+
+                console.log(erro);
+                alert("Erro no servidor");
+
+            });
+
+    }
+
+}
+
+
+function carregarComentarios(idFotografia) {
+
+    fetch("/obras/comentarios/" + idFotografia)
+        .then(function (resposta) {
+            return resposta.json();
+        })
+        .then(function (comentarios) {
+
+            var div =
+                document
+                    .getElementById("lista-comentarios-" + idFotografia);
+
+            div.innerHTML = "";
+
+            for (var i = 0; i < comentarios.length; i++) {
+
+                div.innerHTML += `
+                    <p>
+                        <b>${comentarios[i].nome_usuario}:</b>
+                        ${comentarios[i].comentario}
+                    </p>
+                `;
+
+            }
+
+        })
+        .catch(function (erro) {
+
+            console.log(erro);
+
+        });
+
+}
+
+
+carregarPublicacoes();
+
+
+var usuariosRouter = require("./routes/usuarios");
+var obraRouter = require("./routes/obra");
+
+app.use("/usuarios", usuariosRouter);
+app.use("/obras", obraRouter);
+
+</script>
+
+</body>
+</html>
